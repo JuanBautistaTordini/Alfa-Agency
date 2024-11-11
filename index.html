@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-hero {
-            background-image: 
+            background-image:
                 url('./assets/bg/bg-hero-left.png'),
                 url('./assets/bg/bg-hero-center.png'),
                 url('./assets/bg/bg-hero-right.png');
@@ -16,36 +17,36 @@
             background-size: 600px, 1300px, 600px;
             min-height: 200px;
         }
-        
+
         .testimonial-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
             backdrop-filter: blur(10px);
-        }
-        
-        .benefit-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            border: 1px solid rgba(255,255,255,0.1);
         }
 
         body {
             font-family: 'Averta Std', sans-serif;
         }
-        
+
         /* Fondo CTA con dos imágenes (izquierda y derecha) */
         .bg-cta {
-            background-image: 
-                url('./assets/bg/bg-cta-left.png'), 
+            background-image:
+                url('./assets/bg/bg-cta-left.png'),
                 url('./assets/bg/bg-cta-right.png'),
                 url('./assets/bg/bg-cta-center.png');
             background-position: left center, right center, center center;
             background-repeat: no-repeat;
-            background-size: 700px, 700px,  700px; /* Ajusta el tamaño de las imágenes */
-            min-height: 500px; /* Aumenta el alto si es necesario */
-            position: absolute; /* Permite que el fondo esté detrás del contenido */
+            background-size: 700px, 700px, 700px;
+            /* Ajusta el tamaño de las imágenes */
+            min-height: 500px;
+            /* Aumenta el alto si es necesario */
+            position: absolute;
+            /* Permite que el fondo esté detrás del contenido */
             top: 0;
             left: 0;
-            width: 100%; /* Asegura que cubra toda la sección */
-            height: 100%; /* Ajusta la altura para que cubra todo el área */
+            width: 100%;
+            /* Asegura que cubra toda la sección */
+            height: 100%;
+            /* Ajusta la altura para que cubra todo el área */
         }
 
         /* Fondo de la caja interna con la imagen central */
@@ -54,27 +55,35 @@
             background-size: cover;
             background-position: center center;
             min-width: 1246px;
-            min-height: 455px; /* Mantén el mínimo de altura */
-            padding: 2rem; /* Ajusta el espaciado interior */
-            border-radius: 0.5rem; /* Bordes redondeados */
-            z-index: 1; /* Asegura que el contenido se muestre por encima del fondo */
+            min-height: 455px;
+            /* Mantén el mínimo de altura */
+            padding: 2rem;
+            /* Ajusta el espaciado interior */
+            border-radius: 0.5rem;
+            /* Bordes redondeados */
+            z-index: 1;
+            /* Asegura que el contenido se muestre por encima del fondo */
         }
-        
+
         .testimonial-carousel {
             scroll-behavior: smooth;
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
         .testimonial-carousel::-webkit-scrollbar {
             display: none;
         }
+
         .gradient-bg {
             background-image: linear-gradient(to right, #1a4352, #511f51, #ab2719);
         }
+
         .testimonial-card {
             width: 469px;
             height: 294px;
         }
+
         @media (max-width: 640px) {
             .testimonial-card {
                 width: calc(100vw - 2rem);
@@ -87,19 +96,20 @@
             background: transparent;
             position: relative;
         }
-        
+
         .border-gradient::before {
             content: '';
             position: absolute;
             inset: 0;
-            border-radius: 8px; 
-            padding: 2px; 
-            background: linear-gradient(to left, #1a4352, #511f51, #ab2719); /* Cambiado de 'to bottom' a 'to right' */
-            mask: 
-                linear-gradient(#fff 0 0) content-box, 
+            border-radius: 8px;
+            padding: 2px;
+            background: linear-gradient(to left, #1a4352, #511f51, #ab2719);
+            /* Cambiado de 'to bottom' a 'to right' */
+            mask:
+                linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) content-box, 
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -107,30 +117,33 @@
         }
     </style>
 </head>
+
 <body class="bg-black text-white">
     <!-- Hero Section with Gradient Background -->
     <section class="bg-hero">
         <!-- Header with Logo and Button -->
-        <header class="container mx-auto px-4 py-16 flex justify-between items-center">
+        <header class="container mx-auto px-4 py-12 flex justify-between items-center">
             <div class="w-1/3"></div> <!-- Espacio vacío a la izquierda -->
             <div class="flex justify-center w-1/3">
                 <img src="./assets/icon/hero-logo.png" alt="Alfa Agency" class="h-16">
             </div>
             <div class="w-1/3 flex justify-end">
-                <button class="bg-transparent border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
+                <button
+                    class="bg-transparent border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
                     Agendar sesión GRATIS
                 </button>
             </div>
         </header>
-        
+
         <div class="container mx-auto px-4 py-16">
 
             <!-- Main Content -->
             <div class="max-w-5xl mx-auto text-center">
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                    Cómo conseguir que tu clínica <span class="inline-block"><b>GENERE</b></span> <!-- Agrega negrita -->
+                    Cómo conseguir que tu clínica <span class="inline-block"><b>GENERE</b></span>
+                    <!-- Agrega negrita -->
                 </h1>
-                
+
                 <p class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                     +13.333€ <span class="font-normal">extras en 30 días.</span>
                 </p>
@@ -144,8 +157,9 @@
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center cursor-pointer">
                             <!-- SVG Play Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
-                                <path d="M8 5v14l11-7z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24"
+                                height="24">
+                                <path d="M8 5v14l11-7z" />
                             </svg>
                         </div>
                     </div>
@@ -155,7 +169,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class= "relative py-24">
+    <section class="relative py-24">
         <!-- Fondo cta -->
         <div class="absolute bg-cta z-0"></div>
         <div class="container mx-auto px-4 relative z-10">
@@ -167,66 +181,294 @@
                     <p class="text-lg md:text-2xl px-8">
                         Al terminar, puedes agendar una sesión 1 a 1 totalmente
                         <span class="font-bold">GRATIS</span> (valorada en <br />
-                        <span class="font-bold">180€</span>) donde te entregaremos un plan de 
+                        <span class="font-bold">180€</span>) donde te entregaremos un plan de
                         acción totalmente personalizado <br>después de escuchar tus necesidades.
                     </p>
                     <div class="pt-4">
-                        <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
+                        <a href="#"
+                            class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
                             Agendar sesión GRATIS
                         </a>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </section>
-    
 
     <!-- Benefits Section -->
-    <section class="py-24">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-12">¿Por qué AGENDAR esta sesión?</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="benefit-card p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
-                        </svg>
-                        <h3 class="font-bold">Personalización</h3>
+    <style>
+        .benefits-section {
+            padding: 60px 0;
+            color: white;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .title {
+            text-align: left;
+            font-size: 3.3rem;
+            margin-bottom: 40px;
+            color: white;
+            line-height: 1.2;
+            font-weight: 400;
+            line-height: 66.6px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: -130px;
+
+        }
+
+        .title span {
+            font-weight: bold;
+        }
+
+        .benefits-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 15px;
+            padding: 2px;
+            background-image: linear-gradient(to right, #ab2719, #511f51, #1a4352);
+
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .benefit-card1 {
+            width: 330px;
+            height: 455px;
+        }
+
+        .benefit-card2 {
+            width: 422px;
+            height: 455px;
+        }
+
+        .benefit-card3 {
+            width: 401px;
+            height: 658px;
+            margin-bottom: 0px;
+            background-image: url('./assets/bg/bg_gradient.png');
+
+            /* This will make the card stick out 203px above the others */
+        }
+
+        .icon-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .icon1 {
+            width: 111px;
+            height: 111px;
+            margin-right: 15px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .icon2 {
+            width: 71px;
+            height: 71px;
+            margin-right: 15px;
+            color: white;
+            margin:20px  0 40px 0;
+        }
+        .icon3 {
+            width: 101px;
+            height: 101px;
+            margin-right: 15px;
+            color: white;
+            margin:20px 0 20px 0; 
+        }
+
+        .card-title {
+            font-size: 32px;
+            margin: 10px 0;
+            color: white;
+
+            font-weight: 500;
+            line-height: 35.52px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+        }
+
+        .card-text {
+            color: rgba(255, 255, 255, 0.862);
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: 100;
+            line-height: 26.64px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .agendar-button {
+            width: 348px;
+            height: 60px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+        }
+
+        .agendar-button:hover {
+            background: white;
+            color: black;
+        }
+
+        @media (max-width: 1200px) {
+            .benefits-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .benefit-card1,
+            .benefit-card2,
+            .benefit-card3 {
+                width: 100%;
+                max-width: 422px;
+                height: auto;
+                margin-bottom: 30px;
+            }
+
+            .benefit-card3 {
+                margin-bottom: 30px;
+            }
+
+            .title {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="title">
+                ¿Por qué <span>AGENDAR</span><br> esta sesión?
+            </h2>
+            <div class="benefits-grid">
+                <div class="benefit-card benefit-card1">
+                    <div class="icon-title">
+                        <img src="./assets/icon/icon_conocimiento.png" alt="conocimiento" class="icon1">
                     </div>
-                    <p class="text-gray-300">Estrategias adaptadas específicamente a tu clínica</p>
+                    <h3 class="card-title">Conocimiento</h3>
+                    <p class="card-text">Te vamos aportar conocimiento que hemos ido aprendiendo en los más de 8 años
+                        que llevamos en el sector del marketing digital.</p>
                 </div>
-                <!-- Repeat for other benefit cards -->
+                <div class="benefit-card benefit-card2">
+                    <div class="icon-title">
+                        <img src="./assets/icon/icon_personalizado.png" alt="Personalizado" class="icon2">
+                    </div>
+                    <h3 class="card-title">Personalizado</h3>
+                    <p class="card-text">La reunión es totalmente personalizada. Nos enfocaremos en las necesidades y
+                        desafíos específicos de tu negocio para ofrecer recomendaciones personalizadas y adaptadas a tu
+                        situación.</p>
+                </div>
+                <div class="benefit-card benefit-card3">
+                    <div class="icon-title">
+                        <img src="./assets/icon/icon_noPierdesNada.png" alt="No pierdes nada" class="icon3">
+                    </div>
+                    <h3 class="card-title">No pierdes nada</h3>
+                    <p class="card-text">No tienes nada que perder, solo todo por ganar. Esta sesión está valorada en
+                        más de 180€ puesto el valor que te vamos a dar es personalizado y real. Sin embargo, por ahora,
+                        es totalmente gratuita y sin compromiso. Aprovecha esta oportunidad para conocer cómo puedes
+                        llevar a tu negocio al siguiente nivel sin ningún riesgo.</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="agendar-button">Agendar AHORA</button>
             </div>
         </div>
     </section>
 
     <!-- Testimonial Section -->
-    <section class="py-16 relative overflow-hidden">
+    <section class="py-32 relative overflow-hidden">
         <div class="container mx-auto px-4 md:pl-8 md:pr-0">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
                 <h2 class="text-white text-5xl font-bold mb-2 md:mb-0 text-center md:text-left">
                     Los testimonios de <br /> nuestros <span class="text-white font-extrabold">CLIENTES</span>
                 </h2>
                 <div class="flex space-x-4 px-8">
-                    <button id="prevBtn" class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" aria-label="Testimonio anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="prevBtn"
+                        class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                        aria-label="Testimonio anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <button id="nextBtn" class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400" aria-label="Siguiente testimonio">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="nextBtn"
+                        class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400"
+                        aria-label="Siguiente testimonio">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <div class="relative overflow-hidden pl-2">
             <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center" style="background-image: url('./assets/bg/bg-testimonial.png');">
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center"
+                    style="background-image: url('./assets/bg/bg-testimonial.png');">
                     <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
+                            alt="Avatar de Juan Pérez">
                         <div>
                             <h3 class="text-white font-semibold">Juan Pérez</h3>
                             <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
@@ -235,58 +477,15 @@
                         </div>
                     </div>
                     <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
-                
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
-          
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
-                
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
+                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
                     </p>
                 </div>
 
                 <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
                     <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
+                            alt="Avatar de Juan Pérez">
                         <div>
                             <h3 class="text-white font-semibold">Juan Pérez</h3>
                             <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
@@ -295,7 +494,59 @@
                         </div>
                     </div>
                     <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
+                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
+
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
+                            alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
+                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
+
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
+                            alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
+                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
+
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
+                            alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
+                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
                     </p>
                 </div>
             </div>
@@ -313,7 +564,8 @@
                 </div>
                 <ul class="space-y-4">
                     <li class="text-gray-200">Quieres ser la clínica número 1 de tu zona</li>
-                    <li class="text-gray-200">Te enfocas en construir relaciones sólidas, exitosas y resultados sostenibles a largo plazo</li>
+                    <li class="text-gray-200">Te enfocas en construir relaciones sólidas, exitosas y resultados
+                        sostenibles a largo plazo</li>
                     <li class="text-gray-200">Confías en nuestro equipo de expertos para ejecutar las estrategias</li>
                     <li class="text-gray-200">Estás dispuesto a colaborar activamente y comprometerte</li>
                 </ul>
@@ -327,14 +579,17 @@
                 </div>
                 <ul class="space-y-4">
                     <li class="text-gray-200">Quieres ser la peor clínica de tu zona</li>
-                    <li class="text-gray-200">Te enfocas a construir relaciones insustanciales, fugaces y resultados a corto plazo</li>
-                    <li class="text-gray-200">Confías más en lo que te diga el alguien que no sabe de marketing que lo que te dice un experto</li>
+                    <li class="text-gray-200">Te enfocas a construir relaciones insustanciales, fugaces y resultados a
+                        corto plazo</li>
+                    <li class="text-gray-200">Confías más en lo que te diga el alguien que no sabe de marketing que lo
+                        que te dice un experto</li>
                     <li class="text-gray-200">Estás dispuesto a colaborar sin ganas ni ilusión</li>
                 </ul>
             </div>
         </div>
         <div class="pt-24 flex justify-center">
-            <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
+            <a href="#"
+                class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
                 Agendar sesión GRATIS
             </a>
         </div>
@@ -342,4 +597,5 @@
 
     <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
