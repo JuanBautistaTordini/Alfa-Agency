@@ -297,19 +297,21 @@
             color: white;
             margin-bottom: 20px;
         }
+
         .icon2 {
             width: 71px;
             height: 71px;
             margin-right: 15px;
             color: white;
-            margin:20px  0 40px 0;
+            margin: 20px 0 40px 0;
         }
+
         .icon3 {
             width: 101px;
             height: 101px;
             margin-right: 15px;
             color: white;
-            margin:20px 0 20px 0; 
+            margin: 20px 0 20px 0;
         }
 
         .card-title {
@@ -590,10 +592,163 @@
         <div class="pt-24 flex justify-center">
             <a href="#"
                 class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
-                Agendar sesión GRATIS
+                Quiero mi reunion
             </a>
         </div>
     </section>
+
+    <!-- SECCION DE ANDREA COFOUNDER -->
+    <style>
+        .section-contiene {
+            display: flex;
+            height: 100vh;
+            /* Ocupa toda la altura de la ventana */
+            background-color: #000000;
+            /* Color de fondo de la sección */
+            position: relative;
+            /* Relativo para posicionar los gradientes absolutamente dentro */
+            overflow: hidden;
+            /* Oculta cualquier parte que sobresalga */
+        }
+
+        .box-contiene {
+            width: 796px;
+            height: 490px;
+            background: linear-gradient(90deg, rgba(171, 39, 25, 0.8) 0%, rgba(81, 31, 81, 0.8) 50.5%, rgba(26, 68, 82, 0.8) 100%);
+            color: rgb(255, 255, 255);
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-top: 160px;
+            margin-bottom: -100px;
+            margin-left: -210px;
+            /* Borde redondeado opcional */
+            z-index: 1;
+            /* Asegura que esté por encima de los gradientes */
+        }
+
+        .agendar-button {
+            width: 228px;
+            height: 50px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-weight: 300;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            margin: 30px 0 0 375px;
+        }
+
+        .parrafo-andrea {
+            font-family: Verdana;
+            line-height: 22px;
+            font-size: 15px;
+            font-weight: 100;
+            color: #dfdfdf;
+            margin: 30px 20px -40px 380px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .foto-andrea {
+            width: 400px;
+            height: 500px;
+            margin: 90px -135px 0 290px;
+            z-index: 2;
+            border-radius: 20px;
+        }
+
+        .subtitulo-andrea {
+            font-size: 30px;
+            font-weight: 100;
+            color: #ffffff;
+            margin: 45px 100px 0px -420px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        span {
+
+            font-size: 33px;
+            font-weight: 600;
+            line-height: 46.97px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+
+        }
+
+        .sombra1 {
+            background-image:
+                url('./assets/bg/bg-cta-left.png');
+            background-repeat: no-repeat;
+            background-size: 600px, 600px, 600px;
+            min-height: 500px;
+            position: absolute;
+            top: 30px;
+            left: -100px;
+            width: 900px;
+            height: 700px;
+            transform: rotate(90deg);
+
+
+        }
+
+        .sombra2 {
+            background-image:
+                url('./assets/bg/bg-cta-left.png');
+            background-repeat: no-repeat;
+            background-size: 600px, 600px, 600px;
+            min-height: 500px;
+            position: absolute;
+            top: -180px;
+            left: 840px;
+            width: 700px;
+            height: 700px;
+            transform: rotate(90deg);
+        }
+
+        .sombra3 {
+            background-image:
+                url('./assets/bg/bg-cta-center.png');
+            background-repeat: no-repeat;
+            background-size: 700px, 700px, 700px;
+            min-height: 500px;
+            position: absolute;
+            top: 300px;
+            left: 840px;
+            width: 700px;
+            height: 700px;
+
+        }
+    </style>
+
+    <section class="section-contiene">
+        <img src="./assets/bg/foto_Andrea_Jimenez.jpeg" alt="Andrea Jimenez" class="foto-andrea">
+        <div class="sombra1"></div>
+        <div class="sombra2"></div>
+        <div class="sombra3"></div>
+        <div class="box-contiene">
+            <p class="parrafo-andrea">Encantada de saludarte, soy Andrea Jimenez. Tengo más de 8 años de experiencia en
+                marketing digital, he tenido la suerte de poder formar parte, dentro de agencias de publicidad, del
+                equipo de SEAT, Bayer, Lidl, Carolina Herrera, Paco Rabanne y aprender desde dentro sus
+                estrategias.<br><br>
+
+                No obstante, mi sueño era emprender y tener mi propio negocio. Por eso, hace años fundé mi propia
+                agencia, porque me di cuenta de que la mayoría de las estrategias de marketing que utilizan las empresas
+                están obsoletas, especialmente en el sector de las clínicas.<br><br>
+
+                Además imparto dos asignaturas en la Universidad de Barcelona. Considero que mezclar la teoría y la
+                práctica es clave. Me encanta ayudar y poder establecer relaciones genuinas con todos mis clientes para
+                conseguir siempre juntos el éxito.<br><br></p><button class="agendar-button">Agendar cita
+                GRATIS</button>
+        </div>
+        <h2 class="subtitulo-andrea"><span>Andrea Jimenez</span><br>co-founder y ceo</h2>
+    </section>
+
+
 
     <script src="./assets/js/index.js"></script>
 </body>
