@@ -58,6 +58,29 @@
             border-radius: 0.5rem; /* Bordes redondeados */
             z-index: 1; /* Asegura que el contenido se muestre por encima del fondo */
         }
+        
+        .testimonial-carousel {
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .testimonial-carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(to right, #1a4352, #511f51, #ab2719);
+        }
+        .testimonial-card {
+            width: 469px;
+            height: 294px;
+        }
+        @media (max-width: 640px) {
+            .testimonial-card {
+                width: calc(100vw - 2rem);
+                height: auto;
+                min-height: 294px;
+            }
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -81,7 +104,7 @@
             <!-- Main Content -->
             <div class="max-w-5xl mx-auto text-center">
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                    Cómo conseguir que tu clínica <span class="inline-block"><b>GENERE</b></span>
+                    Cómo conseguir que tu clínica <span class="inline-block"><b>GENERE</b></span> <!-- Agrega negrita -->
                 </h1>
                 
                 <p class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -154,24 +177,104 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-12">Los testimonios de nuestros CLIENTES</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="testimonial-card p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gray-600 rounded-full mr-3"></div>
+    <!-- Testimonial Section -->
+    <section class="py-16 relative overflow-hidden">
+        <div class="container mx-auto px-4 md:pl-32 md:pr-0">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
+                <h2 class="text-white text-5xl font-bold mb-2 md:mb-0 text-center md:text-left">
+                    Los testimonios de <br /> nuestros <span class="text-white font-extrabold">CLIENTES</span>
+                </h2>
+                <div class="flex space-x-4 px-32">
+                    <button id="prevBtn" class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" aria-label="Testimonio anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="nextBtn" class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400" aria-label="Siguiente testimonio">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="relative overflow-hidden pl-24">
+            <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center" style="background-image: url('./assets/bg/bg-testimonial.png');">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
                         <div>
-                            <h4 class="font-bold">Cliente 1</h4>
-                            <div class="flex text-yellow-400">
-                                ★★★★★
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-300">"Testimonio del cliente aquí..."</p>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
                 </div>
-                <!-- Repeat for other testimonials -->
+                
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
+          
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
+                
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
+
+                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
+                    <div class="flex items-center space-x-4 px-4 py-4">
+                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                        <div>
+                            <h3 class="text-white font-semibold">Juan Pérez</h3>
+                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4 px-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -207,5 +310,7 @@
             </div>
         </div>
     </section>
+
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
