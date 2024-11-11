@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Agency - Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-hero {
+            background-image: 
+                url('./assets/bg/bg-hero-left.png'),
+                url('./assets/bg/bg-hero-center.png'),
+                url('./assets/bg/bg-hero-right.png');
+            background-position: left top, center top, right top;
+            background-repeat: no-repeat;
+            background-size: 600px, 550px, 600px;
+            min-height: 200px;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        body {
+            font-family: 'Averta Std', sans-serif;
+        }
+        
+        /* Fondo CTA con dos imágenes (izquierda y derecha) */
+        .bg-cta {
+            background-image: 
+                url('./assets/bg/bg-cta-left.png'), 
+                url('./assets/bg/bg-cta-right.png');
+            background-position: left center, right center;
+            background-repeat: no-repeat;
+            background-size: 700px, 700px; /* Ajusta el tamaño de las imágenes */
+            min-height: 450px; /* Aumenta el alto si es necesario */
+            position: absolute; /* Permite que el fondo esté detrás del contenido */
+            top: 0;
+            left: 0;
+            width: 100%; /* Asegura que cubra toda la sección */
+            height: 100%; /* Ajusta la altura para que cubra todo el área */
+        }
+
+        /* Fondo de la caja interna con la imagen central */
+        .bg-cta-inner {
+            background-image: url('./assets/bg/bg-cta.png');
+            background-size: cover;
+            background-position: center center;
+            min-width: 900px;
+            min-height: 455px; /* Mantén el mínimo de altura */
+            padding: 2rem; /* Ajusta el espaciado interior */
+            border-radius: 0.5rem; /* Bordes redondeados */
+            z-index: 1; /* Asegura que el contenido se muestre por encima del fondo */
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Hero Section with Gradient Background -->
+    <section class="bg-hero">
+        <!-- Header with Logo and Button -->
+        <header class="container mx-auto px-4 py-16 flex justify-between items-center">
+            <div class="w-1/3"></div> <!-- Espacio vacío a la izquierda -->
+            <div class="flex justify-center w-1/3">
+                <img src="./assets/icon/hero-logo.png" alt="Alfa Agency" class="h-16">
+            </div>
+            <div class="w-1/3 flex justify-end">
+                <button class="bg-transparent border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
+                    Agendar sesión GRATIS
+                </button>
+            </div>
+        </header>
+        
+        <div class="container mx-auto px-4 py-16">
+
+            <!-- Main Content -->
+            <div class="max-w-5xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                    Cómo conseguir que tu clínica <span class="inline-block"><b>GENERE</b></span>
+                </h1>
+                
+                <p class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    +13.333€ <span class="font-normal">extras en 30 días.</span>
+                </p>
+                <p class="text-2xl md:text-2xl lg:text-2xl mb-12 opacity-90">
+                    Conoce estrategias avanzadas de captación,<br>
+                    inteligencia artificial y automatización.
+                </p>
+
+                <!-- Video Placeholder -->
+                <div class="relative bg-gray-100 rounded-lg shadow-lg aspect-video mb-12">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center cursor-pointer">
+                            <!-- SVG Play Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class= "relative py-24">
+        <!-- Fondo cta -->
+        <div class="absolute bg-cta z-0"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="bg-cta-inner max-w-5xl mx-auto p-8 rounded-lg">
+                <div class="text-center space-y-6">
+                    <h2 class="text-xl md:text-2xl font-medium">
+                        Te invitamos a que veas el vídeo de 4 min de principio a fin.
+                    </h2>
+                    <p class="text-lg md:text-xl">
+                        Al terminar, puedes agendar una sesión 1 a 1 totalmente 
+                        <span class="font-bold">GRATIS</span> (valorada en 
+                        <span class="font-bold">180€</span>) donde te entregaremos un plan de 
+                        acción totalmente personalizado después de escuchar tus necesidades.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
+                            Agendar sesión GRATIS
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Benefits Section -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-12">¿Por qué AGENDAR esta sesión?</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="benefit-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                        </svg>
+                        <h3 class="font-bold">Personalización</h3>
+                    </div>
+                    <p class="text-gray-300">Estrategias adaptadas específicamente a tu clínica</p>
+                </div>
+                <!-- Repeat for other benefit cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-12">Los testimonios de nuestros CLIENTES</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full mr-3"></div>
+                        <div>
+                            <h4 class="font-bold">Cliente 1</h4>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Testimonio del cliente aquí..."</p>
+                </div>
+                <!-- Repeat for other testimonials -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pros and Cons Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="border border-green-500 rounded-lg p-6">
+                    <h3 class="font-bold text-xl mb-4">Lo que es SI</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Punto positivo 1
+                        </li>
+                        <!-- Repeat for other points -->
+                    </ul>
+                </div>
+                <div class="border border-red-500 rounded-lg p-6">
+                    <h3 class="font-bold text-xl mb-4">Lo que es NO</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            Punto negativo 1
+                        </li>
+                        <!-- Repeat for other points -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
