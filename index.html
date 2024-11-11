@@ -35,11 +35,12 @@
         .bg-cta {
             background-image: 
                 url('./assets/bg/bg-cta-left.png'), 
-                url('./assets/bg/bg-cta-right.png');
-            background-position: left center, right center;
+                url('./assets/bg/bg-cta-right.png'),
+                url('./assets/bg/bg-cta-center.png');
+            background-position: left center, right center, center center;
             background-repeat: no-repeat;
-            background-size: 700px, 700px; /* Ajusta el tamaño de las imágenes */
-            min-height: 450px; /* Aumenta el alto si es necesario */
+            background-size: 700px, 700px,  700px; /* Ajusta el tamaño de las imágenes */
+            min-height: 500px; /* Aumenta el alto si es necesario */
             position: absolute; /* Permite que el fondo esté detrás del contenido */
             top: 0;
             left: 0;
@@ -52,7 +53,7 @@
             background-image: url('./assets/bg/bg-cta.png');
             background-size: cover;
             background-position: center center;
-            min-width: 900px;
+            min-width: 1246px;
             min-height: 455px; /* Mantén el mínimo de altura */
             padding: 2rem; /* Ajusta el espaciado interior */
             border-radius: 0.5rem; /* Bordes redondeados */
@@ -80,6 +81,29 @@
                 height: auto;
                 min-height: 294px;
             }
+        }
+
+        .border-gradient {
+            background: transparent;
+            position: relative;
+        }
+        
+        .border-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 8px; 
+            padding: 2px; 
+            background: linear-gradient(to left, #1a4352, #511f51, #ab2719); /* Cambiado de 'to bottom' a 'to right' */
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -134,25 +158,24 @@
     <section class= "relative py-24">
         <!-- Fondo cta -->
         <div class="absolute bg-cta z-0"></div>
-        
         <div class="container mx-auto px-4 relative z-10">
-            <div class="bg-cta-inner max-w-5xl mx-auto p-8 rounded-lg">
-                <div class="text-center space-y-6">
-                    <h2 class="text-xl md:text-2xl font-medium">
+            <div class="bg-cta-inner max-w-5xl mx-auto p-24 rounded-lg">
+                <div class="text-center space-y-8">
+                    <h2 class="text-xl md:text-4xl font-bold">
                         Te invitamos a que veas el vídeo de 4 min de principio a fin.
                     </h2>
-                    <p class="text-lg md:text-xl">
-                        Al terminar, puedes agendar una sesión 1 a 1 totalmente 
-                        <span class="font-bold">GRATIS</span> (valorada en 
+                    <p class="text-lg md:text-2xl px-8">
+                        Al terminar, puedes agendar una sesión 1 a 1 totalmente
+                        <span class="font-bold">GRATIS</span> (valorada en <br />
                         <span class="font-bold">180€</span>) donde te entregaremos un plan de 
-                        acción totalmente personalizado después de escuchar tus necesidades.
+                        acción totalmente personalizado <br>después de escuchar tus necesidades.
                     </p>
                     <div class="pt-4">
                         <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
                             Agendar sesión GRATIS
                         </a>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </section>
@@ -179,12 +202,12 @@
 
     <!-- Testimonial Section -->
     <section class="py-16 relative overflow-hidden">
-        <div class="container mx-auto px-4 md:pl-32 md:pr-0">
+        <div class="container mx-auto px-4 md:pl-8 md:pr-0">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
                 <h2 class="text-white text-5xl font-bold mb-2 md:mb-0 text-center md:text-left">
                     Los testimonios de <br /> nuestros <span class="text-white font-extrabold">CLIENTES</span>
                 </h2>
-                <div class="flex space-x-4 px-32">
+                <div class="flex space-x-4 px-8">
                     <button id="prevBtn" class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" aria-label="Testimonio anterior">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -199,7 +222,7 @@
             </div>
         </div>
         
-        <div class="relative overflow-hidden pl-24">
+        <div class="relative overflow-hidden pl-2">
             <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
                 <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center" style="background-image: url('./assets/bg/bg-testimonial.png');">
                     <div class="flex items-center space-x-4 px-4 py-4">
@@ -281,33 +304,39 @@
 
     <!-- Pros and Cons Section -->
     <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="border border-green-500 rounded-lg p-6">
-                    <h3 class="font-bold text-xl mb-4">Lo que es SI</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Punto positivo 1
-                        </li>
-                        <!-- Repeat for other points -->
-                    </ul>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
+            <!-- Sección "Es para ti SI" -->
+            <div class="border-gradient w-[575px] h-[455px] rounded-lg p-12">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-semibold text-state-500">Es para ti SI:</h2>
+                    <img src="./assets/icon/task_alt.png" alt="Checkmark" class="h-24 w-24">
                 </div>
-                <div class="border border-red-500 rounded-lg p-6">
-                    <h3 class="font-bold text-xl mb-4">Lo que es NO</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                            Punto negativo 1
-                        </li>
-                        <!-- Repeat for other points -->
-                    </ul>
-                </div>
+                <ul class="space-y-4">
+                    <li class="text-gray-200">Quieres ser la clínica número 1 de tu zona</li>
+                    <li class="text-gray-200">Te enfocas en construir relaciones sólidas, exitosas y resultados sostenibles a largo plazo</li>
+                    <li class="text-gray-200">Confías en nuestro equipo de expertos para ejecutar las estrategias</li>
+                    <li class="text-gray-200">Estás dispuesto a colaborar activamente y comprometerte</li>
+                </ul>
             </div>
+
+            <!-- Sección "No es para ti SI" -->
+            <div class="border-gradient w-[575px] h-[455px] rounded-lg p-12">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-semibold text-state-500">No es para ti SI:</h2>
+                    <img src="./assets/icon/cancel.png" alt="cancel" class="h-24 w-24">
+                </div>
+                <ul class="space-y-4">
+                    <li class="text-gray-200">Quieres ser la peor clínica de tu zona</li>
+                    <li class="text-gray-200">Te enfocas a construir relaciones insustanciales, fugaces y resultados a corto plazo</li>
+                    <li class="text-gray-200">Confías más en lo que te diga el alguien que no sabe de marketing que lo que te dice un experto</li>
+                    <li class="text-gray-200">Estás dispuesto a colaborar sin ganas ni ilusión</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-24 flex justify-center">
+            <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
+                Agendar sesión GRATIS
+            </a>
         </div>
     </section>
 
