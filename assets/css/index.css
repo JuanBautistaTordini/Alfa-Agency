@@ -1,1 +1,20 @@
+/* Definición de la fuente personalizada 'Averta' */
+@font-face {
+    font-family: 'Averta';
+    src: url('../fonts/AvertaDemoPE-ExtraBold.woff') format('woff'); /* Ruta de la fuente en formato WOFF */
+    font-weight: bold; /* Peso de la fuente: negrita */
+    font-style: normal; /* Estilo de la fuente: normal */
+}
 
+/* Definición de la fuente personalizada 'Averta' */
+@font-face {
+    font-family: 'Averta';
+    src: url('../fonts/AvertaDemoPECuttedDemo-Regular.woff') format('woff'); /* Ruta de la fuente en formato WOFF */
+    font-weight: normal; /* Peso de la fuente: normal */
+    font-style: normal; /* Estilo de la fuente: normal */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: 'Averta', sans-serif; /* Uso de la fuente personalizada 'Averta' como fuente principal */
+}
