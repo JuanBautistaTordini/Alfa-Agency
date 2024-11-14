@@ -7,438 +7,6 @@
     <title>Alfa Agency - Clínica</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/index.css">
-    <style>
-        .bg-hero {
-            background-image:
-                url('./assets/bg/bg-hero-left.png'),
-                url('./assets/bg/bg-hero-center.png'),
-                url('./assets/bg/bg-hero-right.png');
-            background-position: left top, center top, right top;
-            background-repeat: no-repeat;
-            background-size: 600px, 1300px, 600px;
-            min-height: 200px;
-        }
-
-        .testimonial-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            backdrop-filter: blur(10px);
-        }
-
-        /* Fondo CTA con dos imágen(izquierda y derecha) */
-        .bg-cta {
-            background-image:
-                url('./assets/bg/bg-cta-left.png'),
-                url('./assets/bg/bg-cta-right.png'),
-                url('./assets/bg/bg-cta-center.png');
-            background-position: left center, right center, center center;
-            background-repeat: no-repeat;
-            background-size: 700px, 700px, 700px;
-            /* Ajusta el tamaño de las imágenes */
-            min-height: 500px;
-            /* Aumenta el alto si es necesario */
-            position: absolute;
-            /* Permite que el fondo esté detrás del contenido */
-            top: 0;
-            left: 0;
-            width: 100%;
-            /* Asegura que cubra toda la sección */
-            height: 100%;
-            /* Ajusta la altura para que cubra todo el área */
-        }
-
-        /* Fondo de la caja interna con la imagen central */
-        .bg-cta-inner {
-            background-image: url('./assets/bg/bg-cta.png');
-            background-size: cover;
-            background-position: center center;
-            min-width: 1100px;
-            min-height: 455px;
-            /* Mantén el mínimo de altura */
-            padding: 2rem;
-            /* Ajusta el espaciado interior */
-            border-radius: 0.5rem;
-            /* Bordes redondeados */
-            z-index: 1;
-            /* Asegura que el contenido se muestre por encima del fondo */
-            min-width: 1246px;
-            min-height: 455px;
-            /* Mantén el mínimo de altura */
-            padding: 2rem;
-            /* Ajusta el espaciado interior */
-            border-radius: 0.5rem;
-            /* Bordes redondeados */
-            z-index: 1;
-            /* Asegura que el contenido se muestre por encima del fondo */
-        }
-
-        .testimonial-carousel {
-            scroll-behavior: smooth;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .testimonial-carousel::-webkit-scrollbar {
-            display: none;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #1a4352, #511f51, #ab2719);
-        }
-
-        .testimonial-card {
-            width: 469px;
-            height: 294px;
-        }
-
-        @media (max-width: 640px) {
-            .testimonial-card {
-                width: calc(100vw - 2rem);
-                height: auto;
-                min-height: 294px;
-            }
-        }
-
-        .border-gradient {
-            background: transparent;
-            position: relative;
-        }
-
-        .border-gradient::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 8px;
-            padding: 2px;
-            background: linear-gradient(to left, #1a4352, #511f51, #ab2719);
-            /* Cambiado de 'to bottom' a 'to right' */
-            mask:
-                linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            -webkit-mask:
-                linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
-
-        /*Benefits Section */
-
-        .benefits-section {
-            padding: 60px 0;
-            color: white;
-        }
-
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            
-        }
-
-        .title_beneficios {
-            text-align: left;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            margin-left: 100px;
-            color: white;
-            line-height: 1.2;
-            font-weight: 100;
-            line-height: 66.6px;
-            text-align: left;
-            margin-bottom: -130px;
-            
-           
-
-        }
-
-        .title span {
-            font-weight: bold;
-        }
-
-        .benefits-grid {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .benefit-card {
-            border-radius: 15px;
-            padding: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefit-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 15px;
-            padding: 2px;
-            background-image: linear-gradient(to right, #ab2719, #511f51, #1a4352);
-
-            -webkit-mask:
-                linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            mask:
-                linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
-
-        .benefit-card1 {
-            width: 330px;
-            height: 455px;
-        }
-
-        .benefit-card2 {
-            width: 422px;
-            height: 455px;
-        }
-
-        .benefit-card3 {
-            width: 401px;
-            height: 658px;
-            margin-bottom: 0px;
-            background-image: url('./assets/bg/bg_gradient.png');
-
-            /* This will make the card stick out 203px above the others */
-        }
-
-        .icon-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .icon1 {
-            width: 111px;
-            height: 111px;
-            margin-right: 15px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .icon2 {
-            width: 71px;
-            height: 71px;
-            margin-right: 15px;
-            color: white;
-            margin: 20px 0 40px 0;
-        }
-
-        .icon3 {
-            width: 101px;
-            height: 101px;
-            margin-right: 15px;
-            color: white;
-            margin: 20px 0 20px 0;
-        }
-
-        .card-title {
-            font-size: 32px;
-            margin: 10px 0;
-            color: white;
-
-            font-weight: 500;
-            line-height: 35.52px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-
-        }
-
-        .card-text {
-            color: rgba(255, 255, 255, 0.862);
-            margin-top: 30px;
-            font-size: 22px;
-            font-weight: 100;
-            line-height: 26.64px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-
-        }
-
-
-        .agendar-button {
-            width: 348px;
-            height: 60px;
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 24px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .agendar-button:hover {
-            background: white;
-            color: black;
-        }
-
-
-        @media (max-width: 1200px) {
-            .benefits-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .benefit-card1,
-            .benefit-card2,
-            .benefit-card3 {
-                width: 100%;
-                max-width: 422px;
-                height: auto;
-                margin-bottom: 30px;
-               
-            }
-
-            .benefit-card3 {
-                margin-bottom: 30px;
-            }
-
-            .title {
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .title {
-                font-size: 2rem;
-            }
-        }
-
-        /* ANDREA SECTIONS */
-        .section-contiene {
-            display: flex;
-            height: 100vh;
-            /* Ocupa toda la altura de la ventana */
-            background-color: #000000;
-            /* Color de fondo de la sección */
-            position: relative;
-            /* Relativo para posicionar los gradientes absolutamente dentro */
-            overflow: hidden;
-            /* Oculta cualquier parte que sobresalga */
-        }
-
-        .box-contiene {
-            width: 900px;
-            height: 520px;
-            background: linear-gradient(90deg, rgba(171, 39, 25, 0.8) 0%, rgba(81, 31, 81, 0.8) 50.5%, rgba(26, 68, 82, 0.8) 100%);
-            color: rgb(255, 255, 255);
-            font-size: 0.8rem;
-            font-weight: bold;
-            border-radius: 10px;
-            margin-top: 400px;
-            margin-bottom: -100px;
-            margin-left: -210px;
-            /* Borde redondeado opcional */
-            z-index: 1;
-            /* Asegura que esté por encima de los gradientes */
-        }
-
-        .agendar-button {
-            width: 228px;
-            height: 50px;
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            border-radius: 25px;
-            font-weight: 300;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            margin: 70px 0 0 375px;
-        }
-
-        .parrafo-andrea {
-            font-family: Verdana;
-            line-height: 22px;
-            font-size: 17px;
-            font-weight: 100;
-            color: #dfdfdf;
-            margin: 30px 20px -40px 380px;
-        }
-
-        .foto-andrea {
-            width: 400px;
-            height: 520px;
-            margin: 320px -135px 0 290px;
-            z-index: 2;
-            border-radius: 20px;
-        }
-
-        .subtitulo-andrea {
-            font-size: 30px;
-            font-weight: 100;
-            color: #ffffff;
-            margin: 290px 0px 0px -520px;
-        }
-
-        span {
-            font-size: 33px;
-            font-weight: 600;
-            line-height: 46.97px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-        }
-
-        .sombra1 {
-            background-image:
-                url('./assets/bg/bg-cta-left.png');
-            background-repeat: no-repeat;
-            background-size: 600px, 600px, 600px;
-            min-height: 500px;
-            position: absolute;
-            top:80px;
-            left: -300px;
-            width: 900px;
-            height: 700px;
-            transform: rotate(180deg);
-        }
-
-        .sombra2 {
-            background-image:
-                url('./assets/bg/bg-cta-left.png');
-            background-repeat: no-repeat;
-            background-size: 600px, 600px, 600px;
-            min-height: 500px;
-            position: absolute;
-            top: -10px;
-            left: 840px;
-            width: 700px;
-            height: 700px;
-            transform: rotate(180deg);
-        }
-
-        .sombra3 {
-            background-image:
-                url('./assets/bg/bg-cta-center.png');
-            background-repeat: no-repeat;
-            background-size: 700px, 700px, 700px;
-            min-height: 500px;
-            position: absolute;
-            top: 550px;
-            left:860px;
-            width: 700px;
-            height: 700px;
-        }
-        .span_beneficios{
-            font-size: 50px;
-        }
-    </style>
 </head>
 
 <body class="bg-black text-white">
@@ -491,236 +59,186 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="relative py-24">
-        <div class="absolute bg-cta z-0" style="background-size: 800px 900px;"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="bg-cta-inner max-w-5xl mx-auto p-24 rounded-lg">
-                <div class="text-center space-y-8">
-                    <h2 class="text-xl md:text-4xl font-bold">
-                        Te invitamos a que veas el vídeo de 4 min de principio a fin.
-                    </h2>
-                    <p class="text-lg md:text-2xl px-8">
-                        Al terminar, puedes agendar una sesión 1 a 1 totalmente
-                        <span class="font-bold">GRATIS</span> (valorada en <br />
-                        <span class="font-bold">180€</span>) donde te entregaremos un plan de
-                        acción totalmente personalizado <br>después de escuchar tus necesidades.
-                    </p>
-                    <div class="pt-4">
-                        <a href="#"
-                            class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
-                            Agendar sesión GRATIS
-                        </a>
+    <main>
+        <section class="relative py-24">
+            <div class="bg-cta"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="bg-cta-inner max-w-5xl mx-auto p-8 md:p-24 rounded-lg">
+                    <div class="text-center space-y-8">
+                        <h2 class="text-xl md:text-4xl font-bold">
+                            Te invitamos a que veas el vídeo de 4 min de principio a fin.
+                        </h2>
+                        <p class="text-lg md:text-2xl px-4 md:px-8">
+                            Al terminar, puedes agendar una sesión 1 a 1 totalmente
+                            <span class="font-bold">GRATIS</span> (valorada en
+                            <span class="font-bold">180€</span>) donde te entregaremos un plan de
+                            acción totalmente personalizado después de escuchar tus necesidades.
+                        </p>
+                        <div class="pt-4">
+                            <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
+                                Agendar sesión GRATIS
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Benefits Section -->
-
-    <section class="benefits-section benefits-grid flex gap-2">
-        <div class="container ">
-            <h2 class="title_beneficios ">
-                ¿Por qué <span class="span_beneficios">AGENDAR</span><br> esta sesión?
-            </h2>
-            <div class="benefits-grid">
-                <div class="benefit-card benefit-card1">
-                    <div class="icon-title">
-                        <img src="./assets/icon/icon_conocimiento.png" alt="conocimiento" class="icon1">
-                    </div>
-                    <h3 class="card-title">Conocimiento</h3>
-                    <p class="card-text">Te vamos aportar conocimiento que hemos ido aprendiendo en los más de 8 años
-                        que llevamos en el sector del marketing digital.</p>
-                </div>
-                <div class="benefit-card benefit-card2">
-                    <div class="icon-title">
-                        <img src="./assets/icon/icon_personalizado.png" alt="Personalizado" class="icon2">
-                    </div>
-                    <h3 class="card-title">Personalizado</h3>
-                    <p class="card-text">La reunión es totalmente personalizada. Nos enfocaremos en las necesidades y
-                        desafíos específicos de tu negocio para ofrecer recomendaciones personalizadas y adaptadas a tu
-                        situación.</p>
-                </div>
-                <div class="benefit-card benefit-card3">
-                    <div class="icon-title">
-                        <img src="./assets/icon/icon_noPierdesNada.png" alt="No pierdes nada" class="icon3">
-                    </div>
-                    <h3 class="card-title">No pierdes nada</h3>
-                    <p class="card-text">No tienes nada que perder, solo todo por ganar. Esta sesión está valorada en
-                        más de 180€ puesto el valor que te vamos a dar es personalizado y real. Sin embargo, por ahora,
-                        es totalmente gratuita y sin compromiso. Aprovecha esta oportunidad para conocer cómo puedes
-                        llevar a tu negocio al siguiente nivel sin ningún riesgo.</p>
-                </div>
-            </div>
-            <div class="px-4 py-8 flex justify-center items-center w-full">
-                <button class="agendar-button mx-auto">Agendar AHORA</button>
-            </div>                 
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="py-32 relative overflow-hidden">
-        <div class="container mx-auto px-4 md:pl-8 md:pr-0">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
-                <h2 class="text-white text-5xl font-bold mb-2 md:mb-0 text-center md:text-left">
-                    Los testimonios de <br /> nuestros <span class="text-white font-extrabold">CLIENTES</span>
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="title_beneficios">
+                    ¿Por qué <span class="span_beneficios">AGENDAR</span><br> esta sesión?
                 </h2>
-                <div class="flex space-x-4 px-8">
-                    <button id="prevBtn"
-                        class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
-                        aria-label="Testimonio anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button id="nextBtn"
-                        class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400"
-                        aria-label="Siguiente testimonio">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                <div class="benefits-grid">
+                    <div class="benefit-card benefit-card1">
+                        <div class="icon-title">
+                            <img src="./assets/icon/icon_conocimiento.png" alt="Icono de conocimiento" class="icon1">
+                        </div>
+                        <h3 class="card-title">Conocimiento</h3>
+                        <p class="card-text">Te vamos aportar conocimiento que hemos ido aprendiendo en los más de 8 años que llevamos en el sector del marketing digital.</p>
+                    </div>
+                    <div class="benefit-card benefit-card2">
+                        <div class="icon-title">
+                            <img src="./assets/icon/icon_personalizado.png" alt="Icono de personalización" class="icon2">
+                        </div>
+                        <h3 class="card-title">Personalizado</h3>
+                        <p class="card-text">La reunión es totalmente personalizada. Nos enfocaremos en las necesidades y desafíos específicos de tu negocio para ofrecer recomendaciones personalizadas y adaptadas a tu situación.</p>
+                    </div>
+                    <div class="benefit-card benefit-card3">
+                        <div class="icon-title">
+                            <img src="./assets/icon/icon_noPierdesNada.png" alt="Icono de no perder nada" class="icon3">
+                        </div>
+                        <h3 class="card-title">No pierdes nada</h3>
+                        <p class="card-text">No tienes nada que perder, solo todo por ganar. Esta sesión está valorada en más de 180€ puesto el valor que te vamos a dar es personalizado y real. Sin embargo, por ahora, es totalmente gratuita y sin compromiso. Aprovecha esta oportunidad para conocer cómo puedes llevar a tu negocio al siguiente nivel sin ningún riesgo.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-8 flex justify-center items-center w-full">
+                    <button class="agendar-button mx-auto">Agendar AHORA</button>
+                </div>                 
+            </div>
+        </section>
+
+        <section class="py-32 relative overflow-hidden">
+            <div class="container mx-auto px-4 md:pl-8 md:pr-0">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
+                    <h2 class="text-white text-5xl font-bold mb-2 md:mb-0 text-center md:text-left">
+                        Los testimonios de <br /> nuestros <span class="text-white font-extrabold">CLIENTES</span>
+                    </h2>
+                    <div class="flex space-x-4 px-8">
+                        <button id="prevBtn" class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" aria-label="Testimonio anterior">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400" aria-label="Siguiente testimonio">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="relative overflow-hidden pl-2">
-            <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center"
-                    style="background-image: url('./assets/bg/bg-testimonial.png');">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                            alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
+            <div class="relative overflow-hidden pl-2">
+                <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
+                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center" style="background-image: url('./assets/bg/bg-testimonial.png');">
+                        <div class="flex items-center space-x-4 px-4 py-4">
+                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                            <div>
+                                <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-white mt-4 px-4">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                        </p>
                     </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
-
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                            alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
+                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
+                        <div class="flex items-center space-x-4 px-4 py-4">
+                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                            <div>
+                                <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-white mt-4 px-4">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                        </p>
                     </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
-
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                            alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
+                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
+                        <div class="flex items-center space-x-4 px-4 py-4">
+                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                            <div>
+                                <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-white mt-4 px-4">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                        </p>
                     </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
-
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                            alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
+                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
+                        <div class="flex items-center space-x-4 px-4 py-4">
+                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                            <div>
+                                <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-white mt-4 px-4">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
+                        </p>
                     </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
-                </div>
 
-                <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-[rgba(55, 68, 72, 0.43)]">
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                            alt="Avatar de Juan Pérez">
-                        <div>
-                            <h3 class="text-white font-semibold">Juan Pérez</h3>
-                            <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                <span class="text-yellow-400">★★★★★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-white mt-4 px-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                        dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus soluta!
-                    </p>
+                    <!-- Repite este bloque para los demás testimonios -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pros and Cons Section -->
-    <section class="py-16">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
-            <!-- Sección "Es para ti SI" -->
-            <div class="border-gradient w-[575px] h-[455px] rounded-lg p-12">
-                <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-xl font-semibold text-state-500">Es para ti SI:</h2>
-                    <img src="./assets/icon/task_alt.png" alt="Checkmark" class="h-24 w-24">
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
+                <div class="border-gradient w-full md:w-[575px] h-auto md:h-[455px] rounded-lg p-12">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-state-500">Es para ti SI:</h2>
+                        <img src="./assets/icon/task_alt.png" alt="Checkmark" class="h-24 w-24">
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="text-gray-200">Quieres ser la clínica número 1 de tu zona</li>
+                        <li class="text-gray-200">Te enfocas en construir relaciones sólidas, exitosas y resultados sostenibles a largo plazo</li>
+                        <li class="text-gray-200">Confías en nuestro equipo de expertos para ejecutar las estrategias</li>
+                        <li class="text-gray-200">Estás dispuesto a colaborar activamente y comprometerte</li>
+                    </ul>
                 </div>
-                <ul class="space-y-4">
-                    <li class="text-gray-200">Quieres ser la clínica número 1 de tu zona</li>
-                    <li class="text-gray-200">Te enfocas en construir relaciones sólidas, exitosas y resultados
-                        sostenibles a largo plazo</li>
-                    <li class="text-gray-200">Confías en nuestro equipo de expertos para ejecutar las estrategias</li>
-                    <li class="text-gray-200">Estás dispuesto a colaborar activamente y comprometerte</li>
-                </ul>
-            </div>
 
-            <!-- Sección "No es para ti SI" -->
-            <div class="border-gradient w-[575px] h-[455px] rounded-lg p-12">
-                <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-xl font-semibold text-state-500">No es para ti SI:</h2>
-                    <img src="./assets/icon/cancel.png" alt="cancel" class="h-24 w-24">
+                <div class="border-gradient w-full md:w-[575px] h-auto md:h-[455px] rounded-lg p-12">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-state-500">No es para ti SI:</h2>
+                        <img src="./assets/icon/cancel.png" alt="cancel" class="h-24 w-24">
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="text-gray-200">Quieres ser la peor clínica de tu zona</li>
+                        <li class="text-gray-200">Te enfocas a construir relaciones insustanciales, fugaces y resultados a corto plazo</li>
+                        <li class="text-gray-200">Confías más en lo que te diga el alguien que no sabe de marketing que lo que te dice un experto</li>
+                        <li class="text-gray-200">Estás dispuesto a colaborar sin ganas ni ilusión</li>
+                    </ul>
                 </div>
-                <ul class="space-y-4">
-                    <li class="text-gray-200">Quieres ser la peor clínica de tu zona</li>
-                    <li class="text-gray-200">Te enfocas a construir relaciones insustanciales, fugaces y resultados a
-                        corto plazo</li>
-                    <li class="text-gray-200">Confías más en lo que te diga el alguien que no sabe de marketing que lo
-                        que te dice un experto</li>
-                    <li class="text-gray-200">Estás dispuesto a colaborar sin ganas ni ilusión</li>
-                </ul>
             </div>
-        </div>
-        <div class="pt-24 flex justify-center">
-            <a href="#"
-                class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
-                Quiero mi reunion
-            </a>
-        </div>
-    </section>
+            <div class="pt-24 flex justify-center">
+                <a href="#" class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
+                    Quiero mi reunion
+                </a>
+            </div>
+        </section>
 
-    <!-- Andrea Section -->
+        <!-- Andrea Section -->
     <section class="section-contiene" style="height: 1200px;">
         <img src="./assets/bg/foto_Andrea_Jimenez.jpeg" alt="Andrea Jimenez" class="foto-andrea">
         <div class="sombra1"></div>
@@ -736,288 +254,235 @@
                 están obsoletas, especialmente en el sector de las clínicas.<br><br>
                 Además imparto dos asignaturas en la Universidad de Barcelona. Considero que mezclar la teoría y la
                 práctica es clave. Me encanta ayudar y poder establecer relaciones genuinas con todos mis clientes para
-                conseguir siempre juntos el éxito.<br><br></p><button class="agendar-button">Agendar cita
-                GRATIS</button>
+                conseguir siempre juntos el éxito.
+            </p>
+                <button class="agendar-button">Agendar cita GRATIS</button>
         </div>
         <h2 class="subtitulo-andrea"><span>Andrea Jimenez</span><br>co-founder & ceo</h2>
     </section>
 
-    <section class="bg-black text-white py-24">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
-            <div class="md:w-1/2 lg:pr-12 pr-0">
-                <div class="sombra1" style=" background-image:
-                url('./assets/bg/bg-cta-left.png');
-            background-repeat: no-repeat;
-            background-size: 600px, 600px, 600px;
-            min-height: 500px;
-            position: absolute;
-            top:6400px;
-            left: -500px;
-            width: 1000px;
-            height: 1000px;
-            transform: rotate(90deg);"></div>
-                <div class="sombra2" style="background-image:
-                url('./assets/bg/bg-cta-right.png');
-            background-repeat: no-repeat;
-            background-size: 600px, 600px, 600px;
-            min-height: 500px;
-            position: absolute;
-            top: 6350px;
-            left: 1000px;
-            width: 700px;
-            height: 700px;
-            transform: rotate(180deg);"></div>
-            <div class="sombra3" style="background-image:
-            url('./assets/bg/bg-cta-center.png');
-        background-repeat: no-repeat;
-        background-size: 900px, 900px, 900px;
-        min-height: 500px;
-        position: absolute;
-        top: 6350px;
-        left: 100px;
-        width: 900px;
-        height: 900px;
-        opacity: 67%;
-        transform: rotate(180deg);"></div>
-        <div class="sombra4" style=" background-image:
-        url('./assets/bg/bg-cta-left.png');
-    background-repeat: no-repeat;
-    background-size: 900px, 600px, 600px;
-    min-height: 500px;
-    position: absolute;
-    top:7210px;
-    left: 900px;
-    width: 1000px;
-    height: 1000px;
-    transform: rotate(90deg);"></div>
-            
-                <h2 class="text-5xl text-white mb-8">
-                    ¿Qué vas a obtener <br />en la <span class="font-bold">LLAMADA?</span>
-                </h2>
-                <p class="text-lg text-white mb-12">
-                    Sesión 100% personalizada con <span class="font-bold text-[1.2rem]">Andrea <br>Jimenez</span>
-                    (Valorada en 180€)
-                </p>
-
-
-
-                <div class="space-y-8">
-                    <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                            <img src="assets/icon/item-2.png" alt="" class="w-8 h-8" />
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">Análisis exhaustivo de tu situación actual</h3>
-                            <p class="text-gray-400 py-4">
-                                Revisaremos en detalle cada aspecto de tu negocio, incluyendo tu estrategia, embudo de
-                                ventas y servicio de atención al cliente, para identificar oportunidades de mejora.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                            <img src="assets/icon/item-3.png" alt="" class="w-8 h-8" />
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">Guía paso a paso para implementar en tu clínica
-                            </h3>
-                            <p class="text-gray-400 py-4">
-                                Te proporcionaremos un plan de acción claro y práctico que podrás aplicar de inmediato
-                                para optimizar tus resultados.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                            <img src="assets/icon/item-1 .png" alt="" class="w-8 h-8" />
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                Si detectamos que podemos ayudarte a alcanzar tus objetivos de manera más efectiva
-                            </h3>
-                            <p class="text-gray-400 py-4">
-                                Te propondremos una colaboración personalizada para acelerar el crecimiento de tu
-                                clínica.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="md:w-1/2 flex justify-center items-center mt-12 md:mt-0">
-                <div class="shadow-md flex justify-center items-center">
-                    <img src="https://dummyimage.com/580x750" alt="Placeholder" class="rounded-lg" />
-                </div>
-            </div>
+    <section class="bg-black text-white py-2 relative overflow-hidden">
+        <!-- Sombras Container -->
+        <div class="sombras-container absolute inset-0 z-0">
+            <div class="sombra1-call"></div>
+            <div class="sombra2-call"></div>
+            <div class="sombra3-call"></div>
+            <div class="sombra4-call"></div>
         </div>
-
-        <div class="w-full flex items-center justify-center py-12 sm:py-16 md:py-32">
-            <div class="w-full max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-6">
-                <div class="bg-cover bg-center rounded-2xl overflow-hidden"
-                    style="background-image: url('assets/bg/bg-cta-large.png');">
-                    <div class="p-8 md:p-12">
-                        <div class="text-center space-y-8">
-                            <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-tight">
-                                Agenda aquí tu reunión <span class="uppercase text-[2.5rem]">gratuita</span>
-                            </h2>
-
-                            <p class="text-lg md:text-xl text-white/90">
-                                Sesión 100% personalizada con <span class="font-bold text-lg">Andrea Jimenez</span>
-                                (Valorada en 180€)
-                            </p>
-
-
-                            <div class="flex justify-center">
-                                <a href="#"
-                                    class="group inline-flex items-center justify-center gap-3 border-2 border-white text-white font-medium text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-auto sm:min-w-[80px] h-[50px]">
-                                    <img src="assets/icon/calendly_logo 1.png" alt="Calendly Logo" class="w-8 h-8">
-                                    <span class="text-lg">Agendar sesión con CALENDLY</span>
-                                </a>
+        
+        <!-- Main Content -->
+        <div class="relative z-10">
+            <!-- Qué vas a obtener en la LLAMADA? -->
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
+                <div class="md:w-1/2 lg:pr-12 pr-0">
+                    <h2 class="text-5xl text-white mb-8">
+                        ¿Qué vas a obtener <br />en la <span class="font-bold">LLAMADA?</span>
+                    </h2>
+                    <p class="text-lg text-white mb-12">
+                        Sesión 100% personalizada con <span class="font-bold text-[1.2rem]">Andrea <br>Jimenez</span> (Valorada en 180€)
+                    </p>
+        
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="assets/icon/item-2.png" alt="" class="w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Análisis exhaustivo de tu situación actual</h3>
+                                <p class="text-gray-400 py-4">
+                                    Revisaremos en detalle cada aspecto de tu negocio, incluyendo tu estrategia, embudo de ventas y servicio de atención al cliente, para identificar oportunidades de mejora.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="assets/icon/item-3.png" alt="" class="w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Guía paso a paso para implementar en tu clínica</h3>
+                                <p class="text-gray-400 py-4">
+                                    Te proporcionaremos un plan de acción claro y práctico que podrás aplicar de inmediato para optimizar tus resultados.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="assets/icon/item-1 .png" alt="" class="w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">
+                                    Si detectamos que podemos ayudarte a alcanzar tus objetivos de manera más efectiva
+                                </h3>
+                                <p class="text-gray-400 py-4">
+                                    Te propondremos una colaboración personalizada para acelerar el crecimiento de tu clínica.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="md:w-1/2 flex justify-center items-center mt-12 md:mt-0">
+                    <div class="shadow-md flex justify-center items-center">
+                        <img src="https://dummyimage.com/580x750" alt="Placeholder" class="rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Agenda aquí tu reunión gratuita -->
+            <div class="w-full flex items-center justify-center py-12 sm:py-16 md:py-32">
+                <div class="w-full max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-6">
+                    <div class="bg-cover bg-center rounded-2xl overflow-hidden" style="background-image: url('assets/bg/bg-cta-large.png');">
+                        <div class="p-8 md:p-12">
+                            <div class="text-center space-y-8">
+                                <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-tight">
+                                    Agenda aquí tu reunión <span class="uppercase text-[2.5rem]">gratuita</span>
+                                </h2>
+                                <p class="text-lg md:text-xl text-white/90">
+                                    Sesión 100% personalizada con <span class="font-bold text-lg">Andrea Jimenez</span> (Valorada en 180€)
+                                </p>
+                                <div class="flex justify-center">
+                                    <a href="#" class="group inline-flex items-center justify-center gap-3 border-2 border-white text-white font-medium text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-auto sm:min-w-[80px] h-[50px]">
+                                        <img src="assets/icon/calendly_logo.png" alt="Calendly Logo" class="w-8 h-8">
+                                        <span class="text-lg">Agendar sesión con CALENDLY</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container px-4 mx-auto w-full text-white py-16 md:py-12">
-            <h2 class="text-center text-3xl md:text-4xl font-medium mb-24">
-                La agencia en <span class="font-bold">NÚMEROS</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto p-8">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
-                        <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
-                            <img src="/assets/icon/calendar_today.png" alt="Calendar icon" width="40" height="40" class="opacity-80" />
+        
+            <!-- La agencia en NÚMEROS -->
+            <div class="container px-4 mx-auto w-full text-white py-16 md:py-12">
+                <h2 class="text-center text-3xl md:text-4xl font-medium mb-24">
+                    La agencia en <span class="font-bold">NÚMEROS</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto p-8">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
+                            <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                <img src="/assets/icon/calendar_today.png" alt="Calendar icon" width="40" height="40" class="opacity-80" />
+                            </div>
                         </div>
+                        <h3 class="text-4xl md:text-5xl font-bold mb-2">+8</h3>
+                        <p class="text-lg md:text-xl">Años de<br />experiencia</p>
                     </div>
-                    <h3 class="text-4xl md:text-5xl font-bold mb-2">+8</h3>
-                    <p class="text-lg md:text-xl">
-                        Años de<br />experiencia
-                    </p>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
-                        <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
-                            <img src="/assets/icon/language.png" alt="Globe icon" width="40" height="40" class="opacity-80" />
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
+                            <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                <img src="/assets/icon/language.png" alt="Globe icon" width="40" height="40" class="opacity-80" />
+                            </div>
                         </div>
+                        <h3 class="text-4xl md:text-5xl font-bold mb-2">+178</h3>
+                        <p class="text-lg md:text-xl">Clientes en<br />3 Países</p>
                     </div>
-                    <h3 class="text-4xl md:text-5xl font-bold mb-2">+178</h3>
-                    <p class="text-lg md:text-xl">
-                        Clientes en<br />3 Países
-                    </p>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
-                        <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
-                            <img src="/assets/icon/money_bag.png" alt="Money bag icon" width="40" height="40" class="opacity-80" />
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
+                            <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                <img src="/assets/icon/money_bag.png" alt="Money bag icon" width="40" height="40" class="opacity-80" />
+                            </div>
                         </div>
+                        <h3 class="text-4xl md:text-5xl font-bold mb-2">+1M €</h3>
+                        <p class="text-lg md:text-xl">Facturado para<br />mis clientes</p>
                     </div>
-                    <h3 class="text-4xl md:text-5xl font-bold mb-2">+1M €</h3>
-                    <p class="text-lg md:text-xl">
-                        Facturado para<br />mis clientes
-                    </p>
-                </div>
-            </div>            
-        </div>
-
-        <div class="w-full px-4 py-32">
-            <h2 class="text-center text-3xl md:text-4xl font-medium text-white mb-12">
-                Preguntas <span class="font-bold">FRECUENTES</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-24">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item faq-item-1 bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" data-faq="1" onclick="toggleFaq(1)">
-                    <h3 class="text-xl font-semibold text-white flex justify-between items-center">
-                        ¿Cómo puedo agendar una sesión?
-                        <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </h3>
-                    <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de Calendly o contactándonos directamente.</p>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div class="faq-item faq-item-2 bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" data-faq="2" onclick="toggleFaq(2)">
-                    <h3 class="text-xl font-semibold text-white flex justify-between items-center">
-                        ¿Cuál es el costo de una sesión?
-                        <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </h3>
-                    <p class="text-gray-200 mt-4 hidden">Los precios varían según el tipo de sesión. Contáctanos para más detalles.</p>
-                </div>
-                <!-- FAQ Item 3 -->
-                <div class="faq-item faq-item-3 bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" data-faq="3" onclick="toggleFaq(3)">
-                    <h3 class="text-xl font-semibold text-white flex justify-between items-center">
-                        ¿Qué necesito para la sesión?
-                        <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </h3>
-                    <p class="text-gray-200 mt-4 hidden">Solo necesitas una conexión estable y el dispositivo de tu elección.</p>
-                </div>
-                <!-- FAQ Item 4 -->
-                <div class="faq-item faq-item-4 bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" data-faq="4" onclick="toggleFaq(4)">
-                    <h3 class="text-xl font-semibold text-white flex justify-between items-center">
-                        ¿Puedo cancelar o reprogramar?
-                        <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </h3>
-                    <p class="text-gray-200 mt-6 hidden">Sí, puedes cancelar o reprogramar con 24 horas de anticipación.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="px-28 py-12">
-            <div 
-              class="rounded-lg p-16 relative overflow-hidden"
-              style="
-                background-image: url('/assets/bg/bg-cta-2.png');
-                background-size: cover;
-                background-position: center;
-              "
-            >
-              <div class="flex justify-between items-center">
-                <div class="space-y-3">
-                  <h2 class="text-4xl font-bold text-white">RESERVA UNA CITA</h2>
-                  <p class="text-white/90">Agenda ahora tu reunión <span class="uppercase text-lg">GRATUITA</span></p>
+        
+            <!-- Preguntas FRECUENTES -->
+            <div class="w-full px-4 py-32">
+                <h2 class="text-center text-3xl md:text-4xl font-medium text-white mb-12">
+                    Preguntas <span class="font-bold">FRECUENTES</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-24">
+                    <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(1)">
+                        <h3 class="text-xl font-semibold text-white flex justify-between items-center">
+                            ¿Cómo puedo agendar una sesión?
+                            <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </h3>
+                        <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de Calendly o contactándonos directamente.</p>
+                    </div>
+                    <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(2)">
+                        <h3 class="text-xl font-semibold text-white flex justify-between items-center">
+                            ¿Cómo puedo agendar una sesión?
+                            <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </h3>
+                        <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de Calendly o contactándonos directamente.</p>
+                    </div>
+                    <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(3)">
+                        <h3 class="text-xl font-semibold text-white flex justify-between items-center">
+                            ¿Cómo puedo agendar una sesión?
+                            <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </h3>
+                        <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de Calendly o contactándonos directamente.</p>
+                    </div>
+                    <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer" style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(4)">
+                        <h3 class="text-xl font-semibold text-white flex justify-between items-center">
+                            ¿Cómo puedo agendar una sesión?
+                            <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </h3>
+                        <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de Calendly o contactándonos directamente.</p>
+                    </div>
+                    <!-- Más preguntas aquí -->
                 </div>
-                <button class="px-20 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-colors duration-300">
-                    Agendar CITA
-                </button>
-              </div>
+            </div>
+    
+            <!-- RESERVA UNA CITA -->
+            <div class="px-4 md:px-28 py-12">
+                <div 
+                  class="rounded-lg p-8 md:p-16 relative overflow-hidden"
+                  style="
+                    background-image: url('/assets/bg/bg-cta-2.png');
+                    background-size: cover;
+                    background-position: center;
+                  "
+                >
+                  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="space-y-3 text-center md:text-left">
+                      <h2 class="text-3xl md:text-4xl font-bold text-white">RESERVA UNA CITA</h2>
+                      <p class="text-white/90">Agenda ahora tu reunión <span class="uppercase text-lg">GRATUITA</span></p>
+                    </div>
+                    <button class="px-8 md:px-20 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-colors duration-300">
+                        Agendar CITA
+                    </button>
+                  </div>
+                </div>
             </div>
         </div>
     </section>
-
+    
+</main>
 
     <footer class="bg-black text-white py-8">
-        <!-- Contact Info -->
         <div class="container mx-auto text-center space-y-8">
-          <div class="flex justify-center items-center space-x-24 text-sm text-gray-300">
+          <div class="flex flex-wrap justify-center items-center space-x-4 md:space-x-24 text-sm text-gray-300">
             <a href="tel:+34619133518" class="hover:text-white transition-colors">+34 619 133 518</a>
             <a href="https://instagram.com/andreajimenez.yt" class="hover:text-white transition-colors">@andreajimenez.yt</a>
-            <a href="mailto:contacto@alfa-agency.com" class="hover:text-white transition-colors">contacto@alfa-agency.com</a>
+            <a href="/cdn-cgi/l/email-protection#ceada1a0baafadbaa18eafa2a8afe3afa9aba0adb7e0ada1a3" class="hover:text-white transition-colors"><span class="__cf_email__" data-cfemail="1b7874756f7a786f745b7a777d7a367a7c7e75786235787476">[email&#160;protected]</span></a>
           </div>
       
           <div class="border-t border-white-800 w-full max-w-7xl mx-auto"></div>
       
-          <!-- Logo -->
           <div class="py-6">
             <img src="/assets/icon/logo-footer_.png" alt="ALFA AGENCY" class="h-16 mx-auto"/>
           </div>
       
-          <!-- Copyright -->
           <div class="text-sm text-gray-400">
             © 2024 Copyright. All rights reserved.
           </div>
         </div>
-      </footer>
+    </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 
