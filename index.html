@@ -137,18 +137,19 @@
             
         }
 
-        .title {
+        .title_beneficios {
             text-align: left;
-            font-size: 3.3rem;
-            margin-bottom: 40px;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            margin-left: 100px;
             color: white;
             line-height: 1.2;
-            font-weight: 400;
+            font-weight: 100;
             line-height: 66.6px;
             text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
             margin-bottom: -130px;
+            
+           
 
         }
 
@@ -301,6 +302,7 @@
                 max-width: 422px;
                 height: auto;
                 margin-bottom: 30px;
+               
             }
 
             .benefit-card3 {
@@ -333,13 +335,13 @@
 
         .box-contiene {
             width: 900px;
-            height: 490px;
+            height: 520px;
             background: linear-gradient(90deg, rgba(171, 39, 25, 0.8) 0%, rgba(81, 31, 81, 0.8) 50.5%, rgba(26, 68, 82, 0.8) 100%);
             color: rgb(255, 255, 255);
             font-size: 0.8rem;
             font-weight: bold;
             border-radius: 10px;
-            margin-top: 160px;
+            margin-top: 400px;
             margin-bottom: -100px;
             margin-left: -210px;
             /* Borde redondeado opcional */
@@ -357,13 +359,13 @@
             font-weight: 300;
             font-size: 17px;
             transition: all 0.3s ease;
-            margin: 30px 0 0 375px;
+            margin: 70px 0 0 375px;
         }
 
         .parrafo-andrea {
             font-family: Verdana;
             line-height: 22px;
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 100;
             color: #dfdfdf;
             margin: 30px 20px -40px 380px;
@@ -372,8 +374,8 @@
 
         .foto-andrea {
             width: 400px;
-            height: 500px;
-            margin: 90px -135px 0 290px;
+            height: 520px;
+            margin: 320px -135px 0 290px;
             z-index: 2;
             border-radius: 20px;
         }
@@ -382,7 +384,7 @@
             font-size: 30px;
             font-weight: 100;
             color: #ffffff;
-            margin: 45px 100px 0px -420px;
+            margin: 290px 0px 0px -520px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -402,11 +404,11 @@
             background-size: 600px, 600px, 600px;
             min-height: 500px;
             position: absolute;
-            top: 30px;
-            left: -100px;
+            top:80px;
+            left: -300px;
             width: 900px;
             height: 700px;
-            transform: rotate(90deg);
+            transform: rotate(180deg);
         }
 
         .sombra2 {
@@ -416,11 +418,11 @@
             background-size: 600px, 600px, 600px;
             min-height: 500px;
             position: absolute;
-            top: -180px;
+            top: -10px;
             left: 840px;
             width: 700px;
             height: 700px;
-            transform: rotate(90deg);
+            transform: rotate(180deg);
         }
 
         .sombra3 {
@@ -430,10 +432,13 @@
             background-size: 700px, 700px, 700px;
             min-height: 500px;
             position: absolute;
-            top: 300px;
-            left: 840px;
+            top: 550px;
+            left:860px;
             width: 700px;
             height: 700px;
+        }
+        .span_beneficios{
+            font-size: 50px;
         }
     </style>
 </head>
@@ -490,8 +495,7 @@
 
     <!-- CTA Section -->
     <section class="relative py-24">
-        <!-- Fondo cta -->
-        <div class="absolute bg-cta z-0"></div>
+        <div class="absolute bg-cta z-0" style="background-size: 800px 900px;"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="bg-cta-inner max-w-5xl mx-auto p-24 rounded-lg">
                 <div class="text-center space-y-8">
@@ -517,10 +521,10 @@
 
     <!-- Benefits Section -->
 
-    <section class="benefits-section">
-        <div class="container">
-            <h2 class="title">
-                ¿Por qué <span>AGENDAR</span><br> esta sesión?
+    <section class="benefits-section benefits-grid flex gap-2">
+        <div class="container ">
+            <h2 class="title_beneficios ">
+                ¿Por qué <span class="span_beneficios">AGENDAR</span><br> esta sesión?
             </h2>
             <div class="benefits-grid">
                 <div class="benefit-card benefit-card1">
@@ -719,7 +723,7 @@
     </section>
 
     <!-- Andrea Section -->
-    <section class="section-contiene">
+    <section class="section-contiene" style="height: 1200px;">
         <img src="./assets/bg/foto_Andrea_Jimenez.jpeg" alt="Andrea Jimenez" class="foto-andrea">
         <div class="sombra1"></div>
         <div class="sombra2"></div>
@@ -737,12 +741,58 @@
                 conseguir siempre juntos el éxito.<br><br></p><button class="agendar-button">Agendar cita
                 GRATIS</button>
         </div>
-        <h2 class="subtitulo-andrea"><span>Andrea Jimenez</span><br>co-founder y ceo</h2>
+        <h2 class="subtitulo-andrea"><span>Andrea Jimenez</span><br>co-founder & ceo</h2>
     </section>
 
     <section class="bg-black text-white py-24">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
             <div class="md:w-1/2 lg:pr-12 pr-0">
+                <div class="sombra1" style=" background-image:
+                url('./assets/bg/bg-cta-left.png');
+            background-repeat: no-repeat;
+            background-size: 600px, 600px, 600px;
+            min-height: 500px;
+            position: absolute;
+            top:6400px;
+            left: -500px;
+            width: 1000px;
+            height: 1000px;
+            transform: rotate(90deg);"></div>
+                <div class="sombra2" style="background-image:
+                url('./assets/bg/bg-cta-right.png');
+            background-repeat: no-repeat;
+            background-size: 600px, 600px, 600px;
+            min-height: 500px;
+            position: absolute;
+            top: 6350px;
+            left: 1000px;
+            width: 700px;
+            height: 700px;
+            transform: rotate(180deg);"></div>
+            <div class="sombra3" style="background-image:
+            url('./assets/bg/bg-cta-center.png');
+        background-repeat: no-repeat;
+        background-size: 900px, 900px, 900px;
+        min-height: 500px;
+        position: absolute;
+        top: 6350px;
+        left: 100px;
+        width: 900px;
+        height: 900px;
+        opacity: 67%;
+        transform: rotate(180deg);"></div>
+        <div class="sombra4" style=" background-image:
+        url('./assets/bg/bg-cta-left.png');
+    background-repeat: no-repeat;
+    background-size: 900px, 600px, 600px;
+    min-height: 500px;
+    position: absolute;
+    top:7210px;
+    left: 900px;
+    width: 1000px;
+    height: 1000px;
+    transform: rotate(90deg);"></div>
+            
                 <h2 class="text-5xl text-white mb-8">
                     ¿Qué vas a obtener <br />en la <span class="font-bold">LLAMADA?</span>
                 </h2>
