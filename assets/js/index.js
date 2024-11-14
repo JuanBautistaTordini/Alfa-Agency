@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.testimonial-carousel');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const cardWidth = 469 + 16; // Ancho de la tarjeta + espacio
+    let cardWidth = 469 + 16; // Ancho de la tarjeta + espacio
+
+    function updateCardWidth() {
+        if (window.innerWidth <= 640) {
+            cardWidth = carousel.clientWidth;
+        } else {
+            cardWidth = 469 + 16;
+        }
+    }
 
     function updateButtonStates() {
         prevBtn.disabled = carousel.scrollLeft <= 0;
@@ -20,30 +28,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     carousel.addEventListener('scroll', updateButtonStates);
-    window.addEventListener('resize', updateButtonStates);
+    window.addEventListener('resize', () => {
+        updateCardWidth();
+        updateButtonStates();
+    });
 
-    // Inicializar estados de los botones
+    // Inicializar estados de los botones y ancho de tarjeta
+    updateCardWidth();
     updateButtonStates();
 });
 
 // Función para togglear la visibilidad de FAQs
 function toggleFaq(faqNumber) {
-    // Selecciona todos los ítems de FAQ
     const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach((item) => {
+    faqItems.forEach((item, index) => {
         const content = item.querySelector('p');
         const icon = item.querySelector('svg');
 
-        // Verifica si el ítem actual es el que debe togglearse
-        if (item.getAttribute('data-faq') === faqNumber.toString()) {
-            content.classList.toggle('hidden'); // Alterna la visibilidad del ítem actual
+        if (index + 1 === faqNumber) {
+            content.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
-            item.classList.toggle('expanded'); // Añade una clase para los elementos expandidos
+            item.classList.toggle('expanded');
         } else {
-            content.classList.add('hidden'); // Oculta todos los demás
+            content.classList.add('hidden');
             icon.classList.remove('rotate-180');
-            item.classList.remove('expanded'); // Elimina la clase expandida de otros ítems
+            item.classList.remove('expanded');
         }
     });
 }
