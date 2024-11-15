@@ -265,25 +265,6 @@ body {
     color: black;
 }
 
-@media (max-width: 1200px) {
-    .benefits-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .benefit-card1,
-    .benefit-card2,
-    .benefit-card3 {
-        width: 100%;
-        max-width: 422px;
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-    .benefit-card3 {
-        margin-bottom: 30px;
-    }
-}
 
 /* New media query for mobile devices */
 @media (max-width: 768px) {
