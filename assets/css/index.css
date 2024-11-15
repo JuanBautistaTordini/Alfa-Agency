@@ -1,22 +1,29 @@
 /* Definición de la fuente personalizada 'Averta' */
 @font-face {
     font-family: 'Averta';
-    src: url('../fonts/AvertaDemoPE-ExtraBold.woff') format('woff'); /* Ruta de la fuente en formato WOFF */
-    font-weight: bold; /* Peso de la fuente: negrita */
-    font-style: normal; /* Estilo de la fuente: normal */
+    src: url('../fonts/AvertaDemoPE-ExtraBold.woff') format('woff');
+    /* Ruta de la fuente en formato WOFF */
+    font-weight: bold;
+    /* Peso de la fuente: negrita */
+    font-style: normal;
+    /* Estilo de la fuente: normal */
 }
 
 /* Definición de la fuente personalizada 'Averta' */
 @font-face {
     font-family: 'Averta';
-    src: url('../fonts/AvertaDemoPECuttedDemo-Regular.woff') format('woff'); /* Ruta de la fuente en formato WOFF */
-    font-weight: normal; /* Peso de la fuente: normal */
-    font-style: normal; /* Estilo de la fuente: normal */
+    src: url('../fonts/AvertaDemoPECuttedDemo-Regular.woff') format('woff');
+    /* Ruta de la fuente en formato WOFF */
+    font-weight: normal;
+    /* Peso de la fuente: normal */
+    font-style: normal;
+    /* Estilo de la fuente: normal */
 }
 
 /* Estilos para el cuerpo del documento */
 body {
-    font-family: 'Averta', sans-serif; /* Uso de la fuente personalizada 'Averta' como fuente principal */
+    font-family: 'Averta', sans-serif;
+    /* Uso de la fuente personalizada 'Averta' como fuente principal */
 }
 
 
@@ -319,7 +326,7 @@ body {
 }
 
 .agendar-button-andrea {
-    width: 228px;
+    width: 250px;
     height: 50px;
     background: transparent;
     color: white;
@@ -329,7 +336,12 @@ body {
     font-size: 17px;
     transition: all 0.3s ease;
     margin: 70px 0 0 375px;
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
+
 
 .parrafo-andrea {
     line-height: 22px;
@@ -361,36 +373,47 @@ body {
         width: 75%;
         height: auto;
         margin: 40px auto;
-        padding: 1.5rem; /* Agrega algo de padding para más espacio interno */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Suaviza la caja con sombra */
+        padding: 1.5rem;
+        /* Agrega algo de padding para más espacio interno */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        /* Suaviza la caja con sombra */
     }
 
     .parrafo-andrea {
-        font-size: 1.1rem; /* Aumenta un poco el tamaño del texto */
-        line-height: 1.6; /* Mejora la legibilidad */
+        font-size: 1.1rem;
+        /* Aumenta un poco el tamaño del texto */
+        line-height: 1.6;
+        /* Mejora la legibilidad */
         margin: 20px auto;
-        max-width: 90%; /* Limita el ancho para evitar que el texto se extienda demasiado */
+        max-width: 90%;
+        /* Limita el ancho para evitar que el texto se extienda demasiado */
     }
 
     .agendar-button {
-        width: 220px; /* Aumenta el tamaño del botón */
+        width: 220px;
+        /* Aumenta el tamaño del botón */
         font-size: 1rem;
-        padding: 0.75rem 1rem; /* Agrega algo de padding para mejor interacción táctil */
+        padding: 0.75rem 1rem;
+        /* Agrega algo de padding para mejor interacción táctil */
         margin: 20px auto;
-        display: block; /* Centra el botón */
+        display: block;
+        /* Centra el botón */
     }
 
     .foto-andrea {
-        max-width: 380px; /* Aumenta un poco el tamaño de la imagen */
+        max-width: 380px;
+        /* Aumenta un poco el tamaño de la imagen */
         margin: 30px auto;
         border-radius: 15px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Añade una sombra sutil a la imagen */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        /* Añade una sombra sutil a la imagen */
     }
 
     /* Centra el subtítulo en tablets */
     .subtitulo-andrea {
         text-align: center;
-        font-size: 1.25rem; /* Aumenta ligeramente el tamaño del subtítulo */
+        font-size: 1.25rem;
+        /* Aumenta ligeramente el tamaño del subtítulo */
         margin-top: 1rem;
     }
 }
@@ -428,7 +451,7 @@ body {
 
 .sombra3 {
     background-image: url('../bg/bg-cta-center.png');
-    bottom:  0;
+    bottom: 0;
     right: -10%;
     width: 50%;
     height: 50%;
@@ -451,12 +474,13 @@ body {
 
 .sombra1-call,
 .sombra2-call,
-.sombra3-call{
+.sombra3-call {
     position: absolute;
     width: 1200px;
     height: 1200px;
 }
-.sombra4-call{
+
+.sombra4-call {
     position: absolute;
     width: 900px;
     height: 900px;
@@ -464,10 +488,13 @@ body {
 
 .sombra1-call {
     background-image: url('../bg/bg-gradiant-andrea-celeste.png');
-    top: 7%;  /* Ajusta las posiciones según lo necesites */
+    top: 7%;
+    /* Ajusta las posiciones según lo necesites */
     left: -20%;
-    background-size: cover;  /* Para asegurar que la imagen cubra el área sin cortarse */
-    transform: rotate(90deg);  /* Rota la imagen 90 grados */
+    background-size: cover;
+    /* Para asegurar que la imagen cubra el área sin cortarse */
+    transform: rotate(90deg);
+    /* Rota la imagen 90 grados */
 }
 
 .sombra2-call {
@@ -482,20 +509,76 @@ body {
 
 .sombra3-call {
     background-image: url('../bg/bg-cta-center.png');
-    top: 15%;  /* Ajusta las posiciones según lo necesites */
+    top: 15%;
+    /* Ajusta las posiciones según lo necesites */
     left: -10%;
-    background-size: cover;  /* Para asegurar que la imagen cubra el área sin cortarse */
-    transform: rotate(90deg);  /* Rota la imagen 90 grados */
+    background-size: cover;
+    /* Para asegurar que la imagen cubra el área sin cortarse */
+    transform: rotate(90deg);
+    /* Rota la imagen 90 grados */
 }
 
 .sombra4-call {
     background-image: url('../bg/celeste.png');
     bottom: 23%;
     right: -20%;
-    background-size: cover;  /* Para asegurar que la imagen cubra el área sin cortarse */
-    transform: rotate(-140deg);  /* Rota la imagen 90 grados */
+    background-size: cover;
+    /* Para asegurar que la imagen cubra el área sin cortarse */
+    transform: rotate(-140deg);
+    /* Rota la imagen 90 grados */
 }
 
-/* por que si por que no */
+/* loader */
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #070707;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    background-image: url('../icon/logo\ circular.png');
+    background-size: cover;
+    animation: spin 0.8s linear infinite; /* Cambiado a 1 segundo para girar más rápido */
+}
 
 
+/* Animación para la rotación */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Oculta el contenido de la página hasta que el loader termine */
+#page-content {
+    display: none;
+}
+
+/* animaciones img */
+
+.zoom-image {
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.zoom-image:hover {
+    transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+}
+
+/* Animación Derecha a Izquierda */
+.derecha-a-izquierda .group:hover span:nth-child(2) span {
+    transform: translateX(100%); /* Mueve el fondo de derecha a izquierda */
+}
+
+/* Animación Izquierda a Derecha */
+.izquierda-a-derecha .group:hover span:nth-child(2) span {
+    transform: translateX(-100%); /* Mueve el fondo de izquierda a derecha */
+}

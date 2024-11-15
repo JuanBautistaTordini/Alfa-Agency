@@ -84,570 +84,654 @@
 </head>
 
 <body class="bg-black text-white">
-    <!-- Hero Section with Gradient Background -->
-    <section class="bg-hero py-12">
-        <!-- Header with Logo and Button -->
-        <header class="container mx-auto px-4 py-8 flex justify-between items-center">
-            <div class="w-1/3"></div> <!-- Espacio vacío a la izquierda -->
-            <div class="flex justify-center w-1/2">
-                <img src="./assets/icon/hero-logo.png" alt="Alfa Agency" class="max-h-16 w-auto sm:max-h-20">
-            </div>
-            <div class="w-1/3 flex justify-end">
-                <button
-                    class="bg-transparent border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-colors hidden sm:block">
-                    Agendar sesión GRATIS
-                </button>
-            </div>
-        </header>
+    <!-- Contenedor del loader -->
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
 
-
-        <div class="container mx-auto px-4 py-2 mt-0 md:mt-4 lg:mt-12">
-
-            <!-- Main Content -->
-            <div class="max-w-5xl mx-auto text-center py-24">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4">
-                    Cómo conseguir que tu clínica <span class="lg:text-6xl font-mono">GENERE</span>
-                </h1>
-
-                <p class="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6">
-                    +13.333€ <span class="font-bold lg:text-5xl">extras en 30 días.</span>
-                </p>
-                <p class="text-2xl md:text-2xl lg:text-2xl mb-24 font-medium">
-                    Conoce estrategias avanzadas de captación,<br>
-                    inteligencia artificial y automatización.
-                </p>
-
-                <!-- Video Placeholder -->
-                <div class="relative bg-gray-100 rounded-lg shadow-lg aspect-video mb-12">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center cursor-pointer">
-                            <!-- SVG Play Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24"
-                                height="24">
-                                <path d="M8 5v14l11-7z" />
-                            </svg>
-                        </div>
-                    </div>
+    <div id="page-content">
+        <!-- Hero Section with Gradient Background -->
+        <section class="bg-hero py-12">
+            <!-- Header with Logo and Button -->
+            <header class="container mx-auto px-4 py-8 flex justify-between items-center">
+                <div class="w-1/3"></div> <!-- Espacio vacío a la izquierda -->
+                <div class="flex justify-center w-1/2">
+                    <img src="./assets/icon/hero-logo.png" alt="Alfa Agency" class="max-h-16 w-auto sm:max-h-20">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <main>
-        <section class="relative py-24">
-            <!-- Fondo solo visible en pantallas grandes y mayores -->
-            <div class="bg-cta hidden lg:block"></div>
-
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="bg-cta-inner max-w-5xl mx-auto p-8 md:p-24 rounded-lg">
-                    <div class="text-center space-y-8">
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-sans font-bold">
-                            Te invitamos a que veas el vídeo de 4 min de principio a fin.
-                        </h2>
-
-                        <p class="text-lg md:text-2xl px-4 md:px-8">
-                            Al terminar, puedes agendar una sesión 1 a 1 totalmente
-                            <span class="font-mono font-extrabold text-3xl">GRATIS</span> (valorada en
-                            <span class="font-mono font-extrabold">180€</span>) donde te entregaremos un plan de
-                            acción totalmente personalizado después de escuchar tus necesidades.
-                        </p>
-                        <div class="pt-4">
-                            <a href="#"
-                                class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
-                                Agendar sesión GRATIS
-                            </a>
-                        </div>
-                    </div>
+                <div class="w-1/3 flex justify-end">
+                    <button
+                        class="group relative hidden sm:block overflow-hidden rounded-full border border-white bg-transparent px-6 py-3 text-white transition-colors hover:text-gray-900">
+                        <span class="relative z-10">Agendar sesión GRATIS</span>
+                        <span class="absolute inset-0 overflow-hidden rounded-full">
+                            <span
+                                class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
+                        </span>
+                    </button>
                 </div>
-            </div>
+                
+                
+            </header>
 
-        </section>
 
-        <section class="benefits-section">
-            <div class="container">
-                <h2 class="title_beneficios">
-                    ¿Por qué <span class="span_beneficios font-extrabold font-mono text-5xl">AGENDAR</span><br> esta
-                    sesión?
-                </h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card benefit-card1">
-                        <div class="icon-title">
-                            <img src="./assets/icon/icon_conocimiento.png" alt="Icono de conocimiento" class="icon1">
+            <div class="container mx-auto px-4 py-2 mt-0 md:mt-4 lg:mt-12">
+
+                <!-- Main Content -->
+                <div class="max-w-5xl mx-auto text-center py-24">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4">
+                        Cómo conseguir que tu clínica <span class="lg:text-6xl font-mono">GENERE</span>
+                    </h1>
+
+                    <p class="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6">
+                        +13.333€ <span class="font-bold lg:text-5xl">extras en 30 días.</span>
+                    </p>
+                    <p class="text-2xl md:text-2xl lg:text-2xl mb-24 font-medium">
+                        Conoce estrategias avanzadas de captación,<br>
+                        inteligencia artificial y automatización.
+                    </p>
+
+                    <!-- Video Placeholder -->
+                    <div class="relative bg-gray-100 rounded-lg shadow-lg aspect-video mb-12">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center cursor-pointer">
+                                <!-- SVG Play Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24"
+                                    height="24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
                         </div>
-                        <h3 class="card-title">Conocimiento</h3>
-                        <p class="card-text">Te vamos aportar conocimiento que hemos ido aprendiendo en los más de 8
-                            años que llevamos en el sector del marketing digital.</p>
                     </div>
-                    <div class="benefit-card benefit-card2">
-                        <div class="icon-title">
-                            <img src="./assets/icon/icon_personalizado.png" alt="Icono de personalización"
-                                class="icon2">
-                        </div>
-                        <h3 class="card-title">Personalizado</h3>
-                        <p class="card-text">La reunión es totalmente personalizada. Nos enfocaremos en las necesidades
-                            y desafíos específicos de tu negocio para ofrecer recomendaciones personalizadas y adaptadas
-                            a tu situación.</p>
-                    </div>
-                    <div class="benefit-card benefit-card3">
-                        <div class="icon-title">
-                            <img src="./assets/icon/icon_noPierdesNada.png" alt="Icono de no perder nada" class="icon3">
-                        </div>
-                        <h3 class="card-title">No pierdes nada</h3>
-                        <p class="card-text">No tienes nada que perder, solo todo por ganar. Esta sesión está valorada
-                            en más de 180€ puesto el valor que te vamos a dar es personalizado y real. Sin embargo, por
-                            ahora, es totalmente gratuita y sin compromiso. Aprovecha esta oportunidad para conocer cómo
-                            puedes llevar a tu negocio al siguiente nivel sin ningún riesgo.</p>
-                    </div>
-                </div>
-                <div class="px-4 py-8 flex justify-center items-center w-full">
-                    <button class="agendar-button mx-auto font-semibold font-sans">Agendar AHORA</button>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 relative overflow-hidden">
-            <div class="container mx-auto px-4 md:pl-8 md:pr-0">
-                <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
-                    <h2 class="text-white text-5xl mb-2 md:mb-0 text-center md:text-left">
-                        Los testimonios de <br /> nuestros <span
-                            class="text-white font-mono font-black text-6xl">CLIENTES</span>
+        <main>
+            <section class="relative py-24">
+                <!-- Fondo solo visible en pantallas grandes y mayores -->
+                <div class="bg-cta hidden lg:block"></div>
+
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="bg-cta-inner max-w-5xl mx-auto p-8 md:p-24 rounded-lg zoom-image">
+                        <div class="text-center space-y-8">
+                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-sans font-bold">
+                                Te invitamos a que veas el vídeo de 4 min de principio a fin.
+                            </h2>
+
+                            <p class="text-lg md:text-2xl px-4 md:px-8">
+                                Al terminar, puedes agendar una sesión 1 a 1 totalmente
+                                <span class="font-mono font-extrabold text-3xl">GRATIS</span> (valorada en
+                                <span class="font-mono font-extrabold">180€</span>) donde te entregaremos un plan de
+                                acción totalmente personalizado después de escuchar tus necesidades.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#" class="group relative inline-block overflow-hidden rounded-full border border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition-colors hover:text-gray-900">
+                                    <span class="relative z-10">Agendar sesión GRATIS</span>
+                                    <span class="absolute inset-0 overflow-hidden rounded-full">
+                                        <span class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="benefits-section">
+                <div class="container">
+                    <h2 class="title_beneficios">
+                        ¿Por qué <span class="span_beneficios font-extrabold font-mono text-5xl">AGENDAR</span><br> esta
+                        sesión?
                     </h2>
-                    <div class="flex space-x-4 px-8">
-                        <button id="prevBtn"
-                            class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
-                            aria-label="Testimonio anterior">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 19l-7-7 7-7" />
-                            </svg>
+                    <div class="benefits-grid">
+                        <div class="benefit-card benefit-card1 zoom-image">
+                            <div class="icon-title">
+                                <img src="./assets/icon/icon_conocimiento.png" alt="Icono de conocimiento"
+                                    class="icon1">
+                            </div>
+                            <h3 class="card-title">Conocimiento</h3>
+                            <p class="card-text">Te vamos aportar conocimiento que hemos ido aprendiendo en los más de 8
+                                años que llevamos en el sector del marketing digital.</p>
+                        </div>
+                        <div class="benefit-card benefit-card2 zoom-image">
+                            <div class="icon-title">
+                                <img src="./assets/icon/icon_personalizado.png" alt="Icono de personalización"
+                                    class="icon2">
+                            </div>
+                            <h3 class="card-title">Personalizado</h3>
+                            <p class="card-text">La reunión es totalmente personalizada. Nos enfocaremos en las
+                                necesidades
+                                y desafíos específicos de tu negocio para ofrecer recomendaciones personalizadas y
+                                adaptadas
+                                a tu situación.</p>
+                        </div>
+                        <div class="benefit-card benefit-card3 zoom-image" >
+                            <div class="icon-title">
+                                <img src="./assets/icon/icon_noPierdesNada.png" alt="Icono de no perder nada"
+                                    class="icon3">
+                            </div>
+                            <h3 class="card-title">No pierdes nada</h3>
+                            <p class="card-text">No tienes nada que perder, solo todo por ganar. Esta sesión está
+                                valorada
+                                en más de 180€ puesto el valor que te vamos a dar es personalizado y real. Sin embargo,
+                                por
+                                ahora, es totalmente gratuita y sin compromiso. Aprovecha esta oportunidad para conocer
+                                cómo
+                                puedes llevar a tu negocio al siguiente nivel sin ningún riesgo.</p>
+                        </div>
+                    </div>
+                    <div class="px-4 py-8 flex justify-center items-center w-full">
+                        <button
+                            class="group relative mx-auto font-semibold font-sans overflow-hidden rounded-full border border-white bg-transparent px-16 py-4 text-white text-lg transition-colors hover:text-gray-900">
+                            <span class="relative z-10">Agendar AHORA</span>
+                            <span class="absolute inset-0 overflow-hidden rounded-full">
+                                <span
+                                    class="absolute left-0 top-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
+                            </span>
                         </button>
-                        <button id="nextBtn"
-                            class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400"
-                            aria-label="Siguiente testimonio">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
                     </div>
+                    
+                    
+                    
                 </div>
-            </div>
+            </section>
 
-            <div class="relative overflow-hidden pl-2">
-                <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
-                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center"
-                        style="background-image: url('./assets/bg/bg-testimonial.png');">
-                        <div class="flex items-center space-x-4 px-4 py-4">
-                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                                alt="Avatar de Juan Pérez">
-                            <div>
-                                <h3 class="text-white font-semibold">Juan Pérez</h3>
-                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                    <span class="text-yellow-400">★★★★★</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-white mt-4 px-4">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                            dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
-                            soluta!
-                        </p>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
-                        <div class="flex items-center space-x-4 px-4 py-4">
-                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                                alt="Avatar de Juan Pérez">
-                            <div>
-                                <h3 class="text-white font-semibold">Juan Pérez</h3>
-                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                    <span class="text-yellow-400">★★★★★</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-white mt-4 px-4">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                            dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
-                            soluta!
-                        </p>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
-                        <div class="flex items-center space-x-4 px-4 py-4">
-                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                                alt="Avatar de Juan Pérez">
-                            <div>
-                                <h3 class="text-white font-semibold">Juan Pérez</h3>
-                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                    <span class="text-yellow-400">★★★★★</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-white mt-4 px-4">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                            dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
-                            soluta!
-                        </p>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
-                        <div class="flex items-center space-x-4 px-4 py-4">
-                            <img class="h-12 w-12 rounded-full bg-gray-300" src="/placeholder.svg?height=48&width=48"
-                                alt="Avatar de Juan Pérez">
-                            <div>
-                                <h3 class="text-white font-semibold">Juan Pérez</h3>
-                                <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
-                                    <span class="text-yellow-400">★★★★★</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-white mt-4 px-4">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam quo
-                            dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
-                            soluta!
-                        </p>
-                    </div>
-
-                    <!-- Repite este bloque para los demás testimonios -->
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
-                <div class="border-gradient w-full md:w-[575px] h-auto md:h-[455px] rounded-lg p-12">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="font-sans text-3xl font-bold text-state-500 tracking-tight font-mono">Es para ti
-                            <span class="font-extrabold text-4xl">SI</span>:</h2>
-                        <img src="./assets/icon/task_alt.png" alt="Checkmark" class="h-24 w-24">
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="text-white">• Quieres ser la clínica número 1 de tu zona</li>
-                        <li class="text-white">• Te enfocas en construir relaciones sólidas, exitosas y resultados
-                            sostenibles a largo plazo</li>
-                        <li class="text-white">• Confías en nuestro equipo de expertos para ejecutar las estrategias
-                        </li>
-                        <li class="text-white">• Estás dispuesto a colaborar activamente y comprometerte</li>
-                    </ul>
-
-                </div>
-
-                <div class="border-gradient w-full md:w-[575px] h-auto md:h-[455px] rounded-lg p-12">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="font-sans text-3xl font-bold text-state-500 tracking-tight font-mono">No es para ti
-                            <span class="font-extrabold text-4xl">SI</span>:</h2>
-                        <img src="./assets/icon/cancel.png" alt="cancel" class="h-24 w-24">
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="text-gray-200">• Quieres ser la peor clínica de tu zona</li>
-                        <li class="text-gray-200">• Te enfocas a construir relaciones insustanciales, fugaces y
-                            resultados a corto plazo</li>
-                        <li class="text-gray-200">• Confías más en lo que te diga el alguien que no sabe de marketing
-                            que lo que te dice un experto</li>
-                        <li class="text-gray-200">• Estás dispuesto a colaborar sin ganas ni ilusión</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-24 flex justify-center">
-                <a href="#"
-                    class="inline-block bg-transparent border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg font-medium">
-                    Quiero mi reunion
-                </a>
-            </div>
-        </section>
-
-        <section class="section-contiene">
-            <img src="./assets/bg/foto_Andrea_Jimenez.jpeg" alt="Andrea Jimenez" class="foto-andrea">
-
-            <div class="sombra1"></div>
-            <div class="sombra2"></div>
-            <div class="sombra3"></div>
-
-            <div class="box-contiene">
-                <p class="parrafo-andrea font-sans font-mono">Encantada de saludarte, soy Andrea Jimenez. Tengo más de 8
-                    años de experiencia en
-                    marketing digital, he tenido la suerte de poder formar parte, dentro de agencias de publicidad, del
-                    equipo de SEAT, Bayer, Lidl, Carolina Herrera, Paco Rabanne y aprender desde dentro sus
-                    estrategias.<br><br>
-                    No obstante, mi sueño era emprender y tener mi propio negocio. Por eso, hace años fundé mi propia
-                    agencia, porque me di cuenta de que la mayoría de las estrategias de marketing que utilizan las
-                    empresas
-                    están obsoletas, especialmente en el sector de las clínicas.<br><br>
-                    Además imparto dos asignaturas en la Universidad de Barcelona. Considero que mezclar la teoría y la
-                    práctica es clave. Me encanta ayudar y poder establecer relaciones genuinas con todos mis clientes
-                    para
-                    conseguir siempre juntos el éxito.
-                </p>
-                <button class="agendar-button-andrea">Agendar cita <span
-                        class="font-bold font-sans">GRATIS</span></button>
-            </div>
-            <h2 class="subtitulo-andrea font-mono font-sans"><span class="font-sans font-bold font-mono text-3xl">Andrea
-                    Jimenez</span><br>Co-Funder & CEO</h2>
-        </section>
-
-        <section class="bg-black text-white py-2 relative overflow-hidden">
-            <!-- Sombras Container -->
-            <div class="sombras-container absolute inset-0 z-0">
-                <div class="sombra1-call"></div>
-                <div class="sombra2-call"></div>
-                <div class="sombra3-call"></div>
-                <div class="sombra4-call"></div>
-            </div>
-
-            <!-- Main Content -->
-            <div class="relative z-10">
-                <!-- Qué vas a obtener en la LLAMADA? -->
-                <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
-                    <div class="md:w-1/2 lg:pr-12 pr-0">
-                        <h2 class="text-5xl text-white mb-8 font-sans font-mono">
-                            ¿Qué vas a obtener <br />en la <span class="font-bold">LLAMADA?</span>
+            <section class="py-32 relative overflow-hidden">
+                <div class="container mx-auto px-4 md:pl-8 md:pr-0">
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4 md:gap-8">
+                        <h2 class="text-white text-5xl mb-2 md:mb-0 text-center md:text-left">
+                            Los testimonios de <br /> nuestros <span
+                                class="text-white font-mono font-black text-6xl">CLIENTES</span>
                         </h2>
-                        <p class="text-lg text-white mb-12 font-sans font-mono text-2xl">
-                            Sesión 100% personalizada con <span class="font-bold text-[1.2rem]">Andrea
-                                <br>Jimenez</span> (Valorada en 180€)
-                        </p>
-
-                        <div class="space-y-8">
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                                    <img src="assets/icon/item-2.png" alt="" class="w-8 h-8" />
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white font-sans font-mono">Análisis exhaustivo
-                                        de tu situación actual</h3>
-                                    <p class="text-white py-4 font-sans font-mono tracking-wide">
-                                        Revisaremos en detalle cada aspecto de tu negocio, <br>incluyendo tu estrategia,
-                                        embudo de ventas y <br>servicio de atención al cliente, para identificar
-                                        <br>oportunidades de mejora.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                                    <img src="assets/icon/item-3.png" alt="" class="w-8 h-8" />
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white font-sans font-mono">Guía paso a paso
-                                        para implementar en tu clínica</h3>
-                                    <p class="text-white py-4 font-sans font-mono tracking-wide">
-                                        Te proporcionaremos un plan de acción claro y práctico que podrás aplicar de
-                                        inmediato para optimizar tus resultados.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                                    <img src="assets/icon/item-1 .png" alt="" class="w-8 h-8" />
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white font-sans font-mono">
-                                        Si detectamos que podemos ayudarte a alcanzar tus objetivos de manera más
-                                        efectiva
-                                    </h3>
-                                    <p class="text-white py-4 font-sans font-mono tracking-wide">
-                                        Te propondremos una colaboración personalizada para acelerar el crecimiento de
-                                        tu clínica.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="md:w-1/2 flex justify-center items-center mt-12 md:mt-0">
-                        <div class="shadow-md flex justify-center items-center">
-                            <img src="https://dummyimage.com/580x750" alt="Placeholder" class="rounded-lg" />
+                        <div class="flex space-x-4 px-8">
+                            <button id="prevBtn"
+                                class="bg-white rounded-full p-3 shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                                aria-label="Testimonio anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button id="nextBtn"
+                                class="gradient-bg rounded-full p-3 shadow-md hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-400"
+                                aria-label="Siguiente testimonio">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Agenda aquí tu reunión gratuita -->
-                <div class="w-full flex items-center justify-center py-12 sm:py-16 md:py-32">
-                    <div class="w-full max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-6">
-                        <div class="bg-cover bg-center rounded-2xl overflow-hidden"
-                            style="background-image: url('assets/bg/bg-cta-large.png');">
-                            <div class="p-8 md:p-12">
-                                <div class="text-center space-y-8">
-                                    <h2
-                                        class="text-2xl md:text-3xl lg:text-5xl text-white leading-tight font-sans font-mono">
-                                        Agenda aquí tu reunión <span
-                                            class="uppercase text-[2.5rem] font-bold">gratuita</span>
-                                    </h2>
-                                    <p class="text-lg md:text-xl text-white/90 text-sans text-mono">
-                                        Sesión 100% personalizada con <span class="font-bold text-lg">Andrea
-                                            Jimenez</span> (Valorada en 180€)
-                                    </p>
-                                    <div class="flex justify-center">
-                                        <iframe
-                                            src="https://api.leadconnectorhq.com/widget/booking/YcT2fUId5Dm9stAQlJzH"
-                                            style="width: 100%;border:none;overflow: hidden;" scrolling="no"
-                                            id="RV1DehLKzLWjR5XDzDC7_1731601007757"></iframe><br>
-                                        <script src="https://link.msgsndr.com/js/form_embed.js"
-                                            type="text/javascript"></script>
+                <div class="relative overflow-hidden pl-2">
+                    <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
+                        <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center"
+                            style="background-image: url('./assets/bg/bg-testimonial.png');">
+                            <div class="flex items-center space-x-4 px-4 py-4">
+                                <img class="h-12 w-12 rounded-full bg-gray-300"
+                                    src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                                <div>
+                                    <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                    <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                        <span class="text-yellow-400">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-white mt-4 px-4">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam
+                                quo
+                                dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
+                                soluta!
+                            </p>
+                        </div>
+                        <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
+                            <div class="flex items-center space-x-4 px-4 py-4">
+                                <img class="h-12 w-12 rounded-full bg-gray-300"
+                                    src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                                <div>
+                                    <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                    <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                        <span class="text-yellow-400">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-white mt-4 px-4">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam
+                                quo
+                                dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
+                                soluta!
+                            </p>
+                        </div>
+                        <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
+                            <div class="flex items-center space-x-4 px-4 py-4">
+                                <img class="h-12 w-12 rounded-full bg-gray-300"
+                                    src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                                <div>
+                                    <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                    <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                        <span class="text-yellow-400">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-white mt-4 px-4">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam
+                                quo
+                                dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
+                                soluta!
+                            </p>
+                        </div>
+                        <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center">
+                            <div class="flex items-center space-x-4 px-4 py-4">
+                                <img class="h-12 w-12 rounded-full bg-gray-300"
+                                    src="/placeholder.svg?height=48&width=48" alt="Avatar de Juan Pérez">
+                                <div>
+                                    <h3 class="text-white font-semibold">Juan Pérez</h3>
+                                    <div class="flex" aria-label="Calificación: 5 de 5 estrellas">
+                                        <span class="text-yellow-400">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-white mt-4 px-4">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nobis magnam numquam
+                                quo
+                                dignissimos reiciendis quaerat, labore eaque reprehenderit tenetur aperiam at temporibus
+                                soluta!
+                            </p>
+                        </div>
+
+                        <!-- Repite este bloque para los demás testimonios -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16">
+                <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
+                    <div class="border-gradient w-full md:w-[575px] h-auto md:h-[455px] rounded-lg p-12">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="font-sans text-3xl font-bold text-state-500 tracking-tight font-mono">Es para ti
+                                <span class="font-extrabold text-4xl">SI</span>:
+                            </h2>
+                            <img src="./assets/icon/task_alt.png" alt="Checkmark" class="h-24 w-24">
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="text-white">• Quieres ser la clínica número 1 de tu zona</li>
+                            <li class="text-white">• Te enfocas en construir relaciones sólidas, exitosas y resultados
+                                sostenibles a largo plazo</li>
+                            <li class="text-white">• Confías en nuestro equipo de expertos para ejecutar las estrategias
+                            </li>
+                            <li class="text-white">• Estás dispuesto a colaborar activamente y comprometerte</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="border-gradient w-full md:w-[575px] h-auto md:h-[455px] rounded-lg p-12">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="font-sans text-3xl font-bold text-state-500 tracking-tight font-mono">No es para
+                                ti
+                                <span class="font-extrabold text-4xl">SI</span>:
+                            </h2>
+                            <img src="./assets/icon/cancel.png" alt="cancel" class="h-24 w-24">
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="text-gray-200">• Quieres ser la peor clínica de tu zona</li>
+                            <li class="text-gray-200">• Te enfocas a construir relaciones insustanciales, fugaces y
+                                resultados a corto plazo</li>
+                            <li class="text-gray-200">• Confías más en lo que te diga el alguien que no sabe de
+                                marketing
+                                que lo que te dice un experto</li>
+                            <li class="text-gray-200">• Estás dispuesto a colaborar sin ganas ni ilusión</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pt-24 flex justify-center">
+                    <a href="#"
+                       class="group relative inline-block overflow-hidden rounded-full border border-white bg-transparent px-10 py-4 text-white text-xl font-medium transition-colors hover:text-gray-900">
+                        <span class="relative z-10">Quiero mi reunión</span>
+                        <span class="absolute inset-0 overflow-hidden rounded-full">
+                            <span
+                                class="absolute left-0 top-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
+                        </span>
+                    </a>
+                </div>                
+            </section>
+
+            <section class="section-contiene">
+                <img src="./assets/bg/foto_Andrea_Jimenez.jpeg" alt="Andrea Jimenez" class="foto-andrea zoom-image">
+
+                <div class="sombra1"></div>
+                <div class="sombra2"></div>
+                <div class="sombra3"></div>
+
+                <div class="box-contiene zoom-image">
+                    <p class="parrafo-andrea font-sans font-mono">Encantada de saludarte, soy Andrea Jimenez. Tengo más
+                        de 8
+                        años de experiencia en
+                        marketing digital, he tenido la suerte de poder formar parte, dentro de agencias de publicidad,
+                        del
+                        equipo de SEAT, Bayer, Lidl, Carolina Herrera, Paco Rabanne y aprender desde dentro sus
+                        estrategias.<br><br>
+                        No obstante, mi sueño era emprender y tener mi propio negocio. Por eso, hace años fundé mi
+                        propia
+                        agencia, porque me di cuenta de que la mayoría de las estrategias de marketing que utilizan las
+                        empresas
+                        están obsoletas, especialmente en el sector de las clínicas.<br><br>
+                        Además imparto dos asignaturas en la Universidad de Barcelona. Considero que mezclar la teoría y
+                        la
+                        práctica es clave. Me encanta ayudar y poder establecer relaciones genuinas con todos mis
+                        clientes
+                        para
+                        conseguir siempre juntos el éxito.
+                    </p>
+                    <button class="agendar-button-andrea group relative font-semibold font-sans overflow-hidden rounded-full border border-white bg-transparent px-8 py-4 text-white text-lg transition-colors hover:text-gray-900">
+                        <span class="relative z-10 font-semibold">Agendar cita <span class="font-bold">GRATIS</span></span>
+                        <span class="absolute inset-0 overflow-hidden rounded-full">
+                            <span
+                                class="absolute left-0 top-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
+                        </span>
+                    </button>
+                    
+                    
+                </div>
+                <h2 class="subtitulo-andrea font-mono font-sans"><span
+                        class="font-sans font-bold font-mono text-3xl">Andrea
+                        Jimenez</span><br>Co-Funder & CEO</h2>
+            </section>
+
+            <section class="bg-black text-white py-2 relative overflow-hidden">
+                <!-- Sombras Container -->
+                <div class="sombras-container absolute inset-0 z-0">
+                    <div class="sombra1-call"></div>
+                    <div class="sombra2-call"></div>
+                    <div class="sombra3-call"></div>
+                    <div class="sombra4-call"></div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="relative z-10">
+                    <!-- Qué vas a obtener en la LLAMADA? -->
+                    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
+                        <div class="md:w-1/2 lg:pr-12 pr-0">
+                            <h2 class="text-5xl text-white mb-8 font-sans font-mono">
+                                ¿Qué vas a obtener <br />en la <span class="font-bold">LLAMADA?</span>
+                            </h2>
+                            <p class="text-lg text-white mb-12 font-sans font-mono text-2xl">
+                                Sesión 100% personalizada con <span class="font-bold text-[1.2rem]">Andrea
+                                    <br>Jimenez</span> (Valorada en 180€)
+                            </p>
+
+                            <div class="space-y-8">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                        <img src="assets/icon/item-2.png" alt="" class="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white font-sans font-mono">Análisis
+                                            exhaustivo
+                                            de tu situación actual</h3>
+                                        <p class="text-white py-4 font-sans font-mono tracking-wide">
+                                            Revisaremos en detalle cada aspecto de tu negocio, <br>incluyendo tu
+                                            estrategia,
+                                            embudo de ventas y <br>servicio de atención al cliente, para identificar
+                                            <br>oportunidades de mejora.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                        <img src="assets/icon/item-3.png" alt="" class="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white font-sans font-mono">Guía paso a
+                                            paso
+                                            para implementar en tu clínica</h3>
+                                        <p class="text-white py-4 font-sans font-mono tracking-wide">
+                                            Te proporcionaremos un plan de acción claro y práctico que podrás aplicar de
+                                            inmediato para optimizar tus resultados.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                        <img src="assets/icon/item-1 .png" alt="" class="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white font-sans font-mono">
+                                            Si detectamos que podemos ayudarte a alcanzar tus objetivos de manera más
+                                            efectiva
+                                        </h3>
+                                        <p class="text-white py-4 font-sans font-mono tracking-wide">
+                                            Te propondremos una colaboración personalizada para acelerar el crecimiento
+                                            de
+                                            tu clínica.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:w-1/2 flex justify-center items-center mt-12 md:mt-0">
+                            <div class="shadow-md flex justify-center items-center">
+                                <img src="https://dummyimage.com/580x750" alt="Placeholder" class="zoom-image rounded-lg" />
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Agenda aquí tu reunión gratuita -->
+                    <div class="w-full flex items-center justify-center py-12 sm:py-16 md:py-32">
+                        <div class="w-full max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-6">
+                            <div class="bg-cover bg-center rounded-2xl overflow-hidden"
+                                style="background-image: url('assets/bg/bg-cta-large.png');">
+                                <div class="p-8 md:p-12">
+                                    <div class="text-center space-y-8">
+                                        <h2
+                                            class="text-2xl md:text-3xl lg:text-5xl text-white leading-tight font-sans font-mono">
+                                            Agenda aquí tu reunión <span
+                                                class="uppercase text-[2.5rem] font-bold">gratuita</span>
+                                        </h2>
+                                        <p class="text-lg md:text-xl text-white/90 text-sans text-mono">
+                                            Sesión 100% personalizada con <span class="font-bold text-lg">Andrea
+                                                Jimenez</span> (Valorada en 180€)
+                                        </p>
+                                        <div class="flex justify-center">
+                                            <iframe
+                                                src="https://api.leadconnectorhq.com/widget/booking/YcT2fUId5Dm9stAQlJzH"
+                                                style="width: 100%;border:none;overflow: hidden;" scrolling="no"
+                                                id="RV1DehLKzLWjR5XDzDC7_1731601007757"></iframe><br>
+                                            <script src="https://link.msgsndr.com/js/form_embed.js"
+                                                type="text/javascript"></script>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- La agencia en NÚMEROS -->
-                <div class="container px-4 mx-auto w-full text-white py-16 md:py-12">
-                    <h2 class="text-center text-3xl md:text-4xl font-medium mb-24">
-                        La agencia en <span class="font-bold font-sans font-mono">NÚMEROS</span>
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto p-8">
-                        <div class="flex flex-col items-center text-center">
-                            <div
-                                class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
-                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
-                                    <img src="/assets/icon/calendar_today.png" alt="Calendar icon" width="40"
-                                        height="40" class="opacity-80" />
+                    <!-- La agencia en NÚMEROS -->
+                    <div class="container px-4 mx-auto w-full text-white py-16 md:py-12">
+                        <h2 class="text-center text-3xl md:text-4xl font-medium mb-24">
+                            La agencia en <span class="font-bold font-sans font-mono">NÚMEROS</span>
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto p-8">
+                            <div class="flex flex-col items-center text-center">
+                                <div
+                                    class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
+                                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                        <img src="/assets/icon/calendar_today.png" alt="Calendar icon" width="40"
+                                            height="40" class="opacity-80" />
+                                    </div>
                                 </div>
+                                <h3 class="text-4xl md:text-5xl font-sans font-mono font-bold mb-2">+8</h3>
+                                <p class="text-lg md:text-xl font-sans">Años de<br />experiencia</p>
                             </div>
-                            <h3 class="text-4xl md:text-5xl font-sans font-mono font-bold mb-2">+8</h3>
-                            <p class="text-lg md:text-xl font-sans">Años de<br />experiencia</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center">
-                            <div
-                                class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
-                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
-                                    <img src="/assets/icon/language.png" alt="Globe icon" width="40" height="40"
-                                        class="opacity-80" />
+                            <div class="flex flex-col items-center text-center">
+                                <div
+                                    class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
+                                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                        <img src="/assets/icon/language.png" alt="Globe icon" width="40" height="40"
+                                            class="opacity-80" />
+                                    </div>
                                 </div>
+                                <h3 class="text-4xl md:text-5xl font-sans font-mono font-bold mb-2">+178</h3>
+                                <p class="text-lg md:text-xl font-sans">Clientes en<br />3 Países</p>
                             </div>
-                            <h3 class="text-4xl md:text-5xl font-sans font-mono font-bold mb-2">+178</h3>
-                            <p class="text-lg md:text-xl font-sans">Clientes en<br />3 Países</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center">
-                            <div
-                                class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
-                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
-                                    <img src="/assets/icon/money_bag.png" alt="Money bag icon" width="40" height="40"
-                                        class="opacity-80" />
+                            <div class="flex flex-col items-center text-center">
+                                <div
+                                    class="w-28 h-28 rounded-full bg-gradient-to-r from-[#1A4452] via-[#511F51] to-[#AB2719] p-1 mb-6">
+                                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                                        <img src="/assets/icon/money_bag.png" alt="Money bag icon" width="40"
+                                            height="40" class="opacity-80" />
+                                    </div>
                                 </div>
+                                <h3 class="text-4xl md:text-5xl font-sans font-mono font-bold mb-2">+1M €</h3>
+                                <p class="text-lg md:text-xl font-sans">Facturado para<br />mis clientes</p>
                             </div>
-                            <h3 class="text-4xl md:text-5xl font-sans font-mono font-bold mb-2">+1M €</h3>
-                            <p class="text-lg md:text-xl font-sans">Facturado para<br />mis clientes</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Preguntas FRECUENTES -->
-                <div class="w-full px-4 py-32">
-                    <h2 class="text-center text-3xl md:text-4xl font-medium text-white mb-12">
-                        Preguntas <span class="font-bold font-sans font-mono">FRECUENTES</span>
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-24">
-                        <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
-                            style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(1)">
-                            <h3 class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
-                                ¿Cómo puedo agendar una sesión?
-                                <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </h3>
-                            <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de
-                                Calendly o contactándonos directamente.</p>
+                    <!-- Preguntas FRECUENTES -->
+                    <div class="w-full px-4 py-32">
+                        <h2 class="text-center text-3xl md:text-4xl font-medium text-white mb-12">
+                            Preguntas <span class="font-bold font-sans font-mono">FRECUENTES</span>
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-24">
+                            <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
+                                style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(1)">
+                                <h3
+                                    class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
+                                    ¿Cómo puedo agendar una sesión?
+                                    <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </h3>
+                                <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro
+                                    enlace de
+                                    Calendly o contactándonos directamente.</p>
+                            </div>
+                            <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
+                                style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(2)">
+                                <h3
+                                    class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
+                                    ¿Cómo puedo agendar una sesión?
+                                    <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </h3>
+                                <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro
+                                    enlace de
+                                    Calendly o contactándonos directamente.</p>
+                            </div>
+                            <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
+                                style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(3)">
+                                <h3
+                                    class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
+                                    ¿Cómo puedo agendar una sesión?
+                                    <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </h3>
+                                <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro
+                                    enlace de
+                                    Calendly o contactándonos directamente.</p>
+                            </div>
+                            <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
+                                style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(4)">
+                                <h3
+                                    class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
+                                    ¿Cómo puedo agendar una sesión?
+                                    <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </h3>
+                                <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro
+                                    enlace de
+                                    Calendly o contactándonos directamente.</p>
+                            </div>
+                            <!-- Más preguntas aquí -->
                         </div>
-                        <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
-                            style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(2)">
-                            <h3 class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
-                                ¿Cómo puedo agendar una sesión?
-                                <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </h3>
-                            <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de
-                                Calendly o contactándonos directamente.</p>
-                        </div>
-                        <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
-                            style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(3)">
-                            <h3 class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
-                                ¿Cómo puedo agendar una sesión?
-                                <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </h3>
-                            <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de
-                                Calendly o contactándonos directamente.</p>
-                        </div>
-                        <div class="faq-item bg-cover bg-center rounded-lg p-8 cursor-pointer"
-                            style="background-image: url('assets/bg/bg-faq.png');" onclick="toggleFaq(4)">
-                            <h3 class="text-xl font-semibold text-white flex justify-between items-center font-sans font-mono">
-                                ¿Cómo puedo agendar una sesión?
-                                <svg class="w-6 h-6 transform transition-transform" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </h3>
-                            <p class="text-gray-200 mt-4 hidden">Puedes agendar una sesión a través de nuestro enlace de
-                                Calendly o contactándonos directamente.</p>
-                        </div>
-                        <!-- Más preguntas aquí -->
                     </div>
-                </div>
 
-                <!-- RESERVA UNA CITA -->
-                <div class="px-4 md:px-28 py-12">
-                    <div class="rounded-lg p-8 md:p-16 relative overflow-hidden" style="
+                    <!-- RESERVA UNA CITA -->
+                    <div class="px-4 md:px-28 py-12">
+                        <div class="rounded-lg p-8 md:p-16 relative overflow-hidden zoom-image" style="
                     background-image: url('/assets/bg/bg-cta-2.png');
                     background-size: cover;
                     background-position: center;
                   ">
-                        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                            <div class="space-y-3 text-center md:text-left">
-                                <h2 class="text-3xl md:text-4xl font-bold text-white font-sans font-mono">RESERVA UNA CITA</h2>
-                                <p class="text-white/90 font-sans font-mono">Agenda ahora tu reunión <span
-                                        class="uppercase text-lg font-bold">GRATUITA</span></p>
+                            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                                <div class="space-y-3 text-center md:text-left">
+                                    <h2 class="text-3xl md:text-4xl font-bold text-white font-sans font-mono">RESERVA
+                                        UNA CITA</h2>
+                                    <p class="text-white/90 font-sans font-mono">Agenda ahora tu reunión <span
+                                            class="uppercase text-lg font-bold">GRATUITA</span></p>
+                                </div>
+                                <button class="group relative px-8 md:px-20 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-colors duration-300">
+                                    <span class="relative z-10">Agendar CITA</span>
+                                    <span class="absolute inset-0 overflow-hidden rounded-full">
+                                        <span
+                                            class="absolute left-0 top-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-white transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
+                                    </span>
+                                </button>
+                                
                             </div>
-                            <button
-                                class="px-8 md:px-20 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-colors duration-300">
-                                Agendar CITA
-                            </button>
                         </div>
                     </div>
                 </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-black text-white py-8">
+            <div class="container mx-auto text-center space-y-8">
+                <div class="flex flex-wrap justify-center items-center space-x-4 md:space-x-24 text-sm text-gray-300">
+                    <a href="tel:+34619133518" class="hover:text-white transition-colors">+34 619 133 518</a>
+                    <a href="https://instagram.com/andreajimenez.yt"
+                        class="hover:text-white transition-colors">@andreajimenez.yt</a>
+                    <a href="/cdn-cgi/l/email-protection#ceada1a0baafadbaa18eafa2a8afe3afa9aba0adb7e0ada1a3"
+                        class="hover:text-white transition-colors"><span class="__cf_email__"
+                            data-cfemail="1b7874756f7a786f745b7a777d7a367a7c7e75786235787476">[email&#160;protected]</span></a>
+                </div>
+
+                <div class="border-t border-white-800 w-full max-w-7xl mx-auto"></div>
+
+                <div class="py-6">
+                    <img src="/assets/icon/logo-footer_.png" alt="ALFA AGENCY" class="h-16 mx-auto" />
+                </div>
+
+                <div class="text-sm text-gray-400">
+                    © 2024 Copyright. All rights reserved.
+                </div>
             </div>
-        </section>
+        </footer>
+    </div>
 
-    </main>
-
-    <footer class="bg-black text-white py-8">
-        <div class="container mx-auto text-center space-y-8">
-            <div class="flex flex-wrap justify-center items-center space-x-4 md:space-x-24 text-sm text-gray-300">
-                <a href="tel:+34619133518" class="hover:text-white transition-colors">+34 619 133 518</a>
-                <a href="https://instagram.com/andreajimenez.yt"
-                    class="hover:text-white transition-colors">@andreajimenez.yt</a>
-                <a href="/cdn-cgi/l/email-protection#ceada1a0baafadbaa18eafa2a8afe3afa9aba0adb7e0ada1a3"
-                    class="hover:text-white transition-colors"><span class="__cf_email__"
-                        data-cfemail="1b7874756f7a786f745b7a777d7a367a7c7e75786235787476">[email&#160;protected]</span></a>
-            </div>
-
-            <div class="border-t border-white-800 w-full max-w-7xl mx-auto"></div>
-
-            <div class="py-6">
-                <img src="/assets/icon/logo-footer_.png" alt="ALFA AGENCY" class="h-16 mx-auto" />
-            </div>
-
-            <div class="text-sm text-gray-400">
-                © 2024 Copyright. All rights reserved.
-            </div>
-        </div>
-    </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script>
+        // Esconde el loader después de 2 segundos y muestra el contenido
+        setTimeout(() => {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('page-content').style.display = 'block';
+        }, 2000);
+    </script>
 </body>
 
 </html>
