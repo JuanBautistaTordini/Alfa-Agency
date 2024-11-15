@@ -70,32 +70,60 @@ body {
     z-index: 1;
 }
 
+
+.gradient-bg {
+    background-image: linear-gradient(to right, #1a4352, #511f51, #ab2719);
+}
+
+
+/* Contenedor principal del carousel */
 .testimonial-carousel {
     scroll-behavior: smooth;
-    -ms-overflow-style: none;
+    -ms-overflow-style: touch;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    margin-left: 4rem; /* Reducido de 8rem a 4rem para desktop */
+    position: relative;
 }
 
 .testimonial-carousel::-webkit-scrollbar {
     display: none;
 }
 
-.gradient-bg {
-    background-image: linear-gradient(to right, #1a4352, #511f51, #ab2719);
-}
-
 .testimonial-card {
     width: 469px;
     height: 294px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
 }
 
-@media (max-width: 640px) {
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        margin-left: 1rem; /* Reducido de 2rem a 1rem para móvil */
+    }
     .testimonial-card {
         width: calc(100vw - 2rem);
-        height: auto;
-        min-height: 294px;
     }
 }
+
+@media (min-width: 769px) {
+    .testimonial-card {
+        width: calc(33vw - 2rem);
+    }
+}
+
+/* Pantallas muy grandes */
+@media (min-width: 1440px) {
+    .testimonial-carousel {
+        margin-left: 6rem; /* Reducido de 12rem a 6rem para pantallas grandes */
+    }
+}
+
 
 .border-gradient {
     background: transparent;
@@ -573,12 +601,30 @@ body {
     transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
 }
 
-/* Animación Derecha a Izquierda */
-.derecha-a-izquierda .group:hover span:nth-child(2) span {
-    transform: translateX(100%); /* Mueve el fondo de derecha a izquierda */
-}
+/* @keyframes slidein-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slidein-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .slidein-left {
+    animation: slidein-left 1.5s ease-out;
+  }
+  
+  .slidein-right {
+    animation: slidein-right 1.5s ease-out;
+  } */
+  
 
-/* Animación Izquierda a Derecha */
-.izquierda-a-derecha .group:hover span:nth-child(2) span {
-    transform: translateX(-100%); /* Mueve el fondo de izquierda a derecha */
-}

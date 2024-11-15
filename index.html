@@ -28,14 +28,11 @@
                 height: auto;
                 margin-bottom: 2rem;
             }
-
-            .testimonial-carousel {
-                padding-left: 1rem;
-            }
-
+            /*
             .testimonial-card {
                 width: calc(100vw - 2rem);
             }
+            */
 
             .section-contiene {
                 flex-direction: column;
@@ -93,14 +90,14 @@
         <!-- Hero Section with Gradient Background -->
         <section class="bg-hero py-12">
             <!-- Header with Logo and Button -->
-            <header class="container mx-auto px-4 py-8 flex justify-between items-center">
+            <header class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="w-1/3"></div> <!-- Espacio vacío a la izquierda -->
                 <div class="flex justify-center w-1/2">
-                    <img src="./assets/icon/hero-logo.png" alt="Alfa Agency" class="max-h-16 w-auto sm:max-h-20">
+                    <img src="./assets/icon/hero-logo.png" alt="Alfa Agency" class="max-h-16 w-auto sm:max-h-20 slidein-left">
                 </div>
                 <div class="w-1/3 flex justify-end">
                     <button
-                        class="group relative hidden sm:block overflow-hidden rounded-full border border-white bg-transparent px-6 py-3 text-white transition-colors hover:text-gray-900">
+                        class="group relative hidden sm:block overflow-hidden rounded-full border border-white bg-transparent px-6 py-3 text-white transition-colors hover:text-gray-900 slidein-right">
                         <span class="relative z-10">Agendar sesión GRATIS</span>
                         <span class="absolute inset-0 overflow-hidden rounded-full">
                             <span
@@ -113,24 +110,24 @@
             </header>
 
 
-            <div class="container mx-auto px-4 py-2 mt-0 md:mt-4 lg:mt-12">
+            <div class="container mx-auto px-4 py-2 mt-0 md:mt-2 lg:mt-12">
 
                 <!-- Main Content -->
                 <div class="max-w-5xl mx-auto text-center py-24">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4 slidein-left">
                         Cómo conseguir que tu clínica <span class="lg:text-6xl font-mono">GENERE</span>
                     </h1>
 
-                    <p class="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6">
-                        +13.333€ <span class="font-bold lg:text-5xl">extras en 30 días.</span>
-                    </p>
-                    <p class="text-2xl md:text-2xl lg:text-2xl mb-24 font-medium">
-                        Conoce estrategias avanzadas de captación,<br>
-                        inteligencia artificial y automatización.
-                    </p>
+                        <p class="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6 slidein-right">
+                            +13.333€ <span class="font-bold lg:text-5xl">extras en 30 días.</span>
+                        </p>
+                        <p class="text-2xl md:text-2xl lg:text-2xl mb-24 font-medium slidein-left">
+                            Conoce estrategias avanzadas de captación,<br>
+                            inteligencia artificial y automatización.
+                        </p>
 
                     <!-- Video Placeholder -->
-                    <div class="relative bg-gray-100 rounded-lg shadow-lg aspect-video mb-12">
+                    <div class="relative bg-gray-100 rounded-lg shadow-lg aspect-video mb-12 slidein-right">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div
                                 class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center cursor-pointer">
@@ -147,7 +144,7 @@
         </section>
 
         <main>
-            <section class="relative py-24">
+            <section class="relative py-24 animado slidein-left">
                 <!-- Fondo solo visible en pantallas grandes y mayores -->
                 <div class="bg-cta hidden lg:block"></div>
 
@@ -178,7 +175,7 @@
 
             </section>
 
-            <section class="benefits-section">
+            <section class="benefits-section slidein-right">
                 <div class="container">
                     <h2 class="title_beneficios">
                         ¿Por qué <span class="span_beneficios font-extrabold font-mono text-5xl">AGENDAR</span><br> esta
@@ -267,7 +264,7 @@
                     </div>
                 </div>
 
-                <div class="relative overflow-hidden pl-2">
+                <div class="relative overflow-hidden pl-4">
                     <div class="testimonial-carousel flex space-x-8 pl-4 md:pl-32 overflow-x-auto">
                         <div class="testimonial-card flex-shrink-0 p-4 rounded-lg shadow-lg bg-cover bg-center"
                             style="background-image: url('./assets/bg/bg-testimonial.png');">

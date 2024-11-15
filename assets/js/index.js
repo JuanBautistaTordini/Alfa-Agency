@@ -1,41 +1,99 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Elementos del DOM
     const carousel = document.querySelector('.testimonial-carousel');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    let cardWidth = 469 + 16; // Ancho de la tarjeta + espacio
+    const cards = document.querySelectorAll('.testimonial-card');
 
-    function updateCardWidth() {
-        if (window.innerWidth <= 640) {
-            cardWidth = carousel.clientWidth;
-        } else {
-            cardWidth = 469 + 16;
-        }
+    // Configurar el ancho de las tarjetas para diferentes pantallas
+    function setCardWidths() {
+        const viewportWidth = window.innerWidth;
+        cards.forEach(card => {
+            if (viewportWidth < 768) { // móvil
+                card.style.width = 'calc(100vw - 2rem)';
+            } else { // desktop
+                card.style.width = 'calc(33vw - 2rem)';
+            }
+        });
     }
 
-    function updateButtonStates() {
-        prevBtn.disabled = carousel.scrollLeft <= 0;
-        nextBtn.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth;
-        prevBtn.classList.toggle('opacity-50', prevBtn.disabled);
-        nextBtn.classList.toggle('opacity-50', nextBtn.disabled);
+    // Llamar inicialmente y en cada cambio de tamaño de ventana
+    setCardWidths();
+    window.addEventListener('resize', setCardWidths);
+
+    // Función para obtener el ancho actual de una tarjeta
+    function getCardWidth() {
+        const card = cards[0];
+        const cardStyle = window.getComputedStyle(card);
+        const cardWidth = card.offsetWidth +
+            parseInt(cardStyle.marginLeft) +
+            parseInt(cardStyle.marginRight);
+        return cardWidth;
     }
 
-    prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    // Función para mover al siguiente grupo
+    function slideNext() {
+        const cardWidth = getCardWidth();
+        const currentPosition = carousel.scrollLeft;
+        const nextPosition = currentPosition + cardWidth;
+        
+        carousel.scrollTo({
+            left: nextPosition,
+            behavior: 'smooth'
+        });
+    }
+
+    // Función para mover al grupo anterior
+    function slidePrev() {
+        const cardWidth = getCardWidth();
+        const currentPosition = carousel.scrollLeft;
+        const prevPosition = currentPosition - cardWidth;
+        
+        carousel.scrollTo({
+            left: prevPosition,
+            behavior: 'smooth'
+        });
+    }
+
+    // Función para verificar si hay más contenido para desplazar
+    function updateButtonVisibility() {
+        const isAtStart = carousel.scrollLeft <= 0;
+        const isAtEnd = carousel.scrollLeft >= (carousel.scrollWidth - carousel.clientWidth - 10);
+
+        prevBtn.style.opacity = isAtStart ? '0.5' : '1';
+        nextBtn.style.opacity = isAtEnd ? '0.5' : '1';
+        prevBtn.disabled = isAtStart;
+        nextBtn.disabled = isAtEnd;
+    }
+
+    // Event Listeners
+    prevBtn.addEventListener('click', slidePrev);
+    nextBtn.addEventListener('click', slideNext);
+    carousel.addEventListener('scroll', updateButtonVisibility);
+
+    // Gestión táctil
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
     });
 
-    nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    carousel.addEventListener('touchmove', (e) => {
+        if (!startX) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
     });
 
-    carousel.addEventListener('scroll', updateButtonStates);
-    window.addEventListener('resize', () => {
-        updateCardWidth();
-        updateButtonStates();
+    carousel.addEventListener('touchend', () => {
+        startX = null;
     });
 
-    // Inicializar estados de los botones y ancho de tarjeta
-    updateCardWidth();
-    updateButtonStates();
+    // Inicializar estado de los botones
+    updateButtonVisibility();
 });
 
 // Función para togglear la visibilidad de FAQs
